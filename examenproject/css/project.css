@@ -29,15 +29,15 @@ main {
   grid-area: pageContent;
 
   /* Margin & padding */
-  padding: 25px;
-  padding-top: 0;
+  margin-bottom: 20px;
+  padding: 0px 25px 0px 20px;
 }
 
 /* Navbar */
 nav {
   background-color: #333;
   grid-area: header;
-  height: 9vh;
+  height: 52px;
   padding: 0;
 }
 
@@ -66,12 +66,16 @@ li a {
 }
 
 li:hover {
-  background: red;
+  background: rgb(148, 147, 147);
   cursor: pointer;
 }
 
+li.active {
+  background-color: rgb(83, 83, 83);
+}
+
 ul li ul {
-  background: orange;
+  background: #333;
   visibility: hidden;
   opacity: 0;
   min-width: 5rem;
@@ -169,11 +173,37 @@ nav h2 {
 }
 
 .overKeuze {
+  grid-area: overKeuze;
 }
 
 .testimonials {
+  /* Grid item */
   grid-area: testimonials;
 }
+
+.testimonial {
+  background-color: rgb(226, 226, 226);
+  box-shadow: 5px 5px 5px 0px rgb(187, 186, 186);
+  border-radius: 10px;
+
+  /* Margin & padding */
+  padding: 10px 5px 5px 15px;
+  margin: 30px 15px 30px 5px;
+}
+
+.testimonialName {
+  font-style: normal; 
+  display: inline;
+  font-weight: 600;
+
+  /* Margin & padding */
+}
+
+.testminonialRating {
+  display: inline;
+  margin-left: 10px;
+}
+
 
 /* Styling */
 .product h2 {
