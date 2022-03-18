@@ -1,0 +1,182 @@
+/*
+Filename: project.css
+Author: Jonas Van der Reysen
+*/
+
+/* Gemeenschappelijke opmaak */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  /* Grids */
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template:
+    "header"
+    "pageContent";
+  grid-template-rows: 0.25fr auto;
+  row-gap: 25px;
+
+  /* Margin and padding */
+  margin: 0;
+
+  /* Font */
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  grid-area: pageContent;
+}
+
+/* Navbar */
+nav {
+  background-color: #333;
+  grid-area: header;
+  height: 9vh;
+  padding: 0;
+}
+
+.logo {
+  height: 100%;
+}
+
+ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  transition-duration: 0.5s;
+}
+  
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+li:hover {
+  background: red;
+  cursor: pointer;
+}
+
+ul li ul {
+  background: orange;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+/* Styling */
+h1 {
+  display: none;
+}
+
+nav h2 {
+  display: none;
+}
+
+/* Home - index.html */
+/* Grids */
+.home {
+  display: grid;
+
+  column-gap: 2vw;
+  grid-template: "product testimonials";
+  grid-template-columns: 1fr 1fr;
+}
+
+.product {
+  /* Grid item */
+  grid-area: product;
+
+  /* Grid container */
+  display: grid;
+  grid-template:
+    "overProduct"
+    "overMezelf"
+    "overKeuze";
+
+  background: #9e9e9e;
+  border-radius: 10px;
+
+  /* Margin and padding */
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+
+.overProduct {
+  /* Grid item */
+  grid-area: overProduct;
+
+  /* Grid container */
+  display: grid;
+  grid-template-areas: "productImage productTitle";
+  grid-template-columns: 1fr 2fr;
+  column-gap: 25px;
+}
+
+.productImage {
+  grid-area: productImage;
+
+  width: 100%;
+}
+
+.productTitle {
+  grid-area: productTitle;
+
+  /* Margin and padding */
+  margin-top: 5px;
+
+  /* Other styling */
+  text-align: left;
+}
+
+.productText {
+  grid-area: productTitle;
+
+  /* Margin and padding */
+  margin-top: 45px;
+}
+
+.overMezelf {
+  grid-area: overMezelf;
+}
+
+.overKeuze {
+}
+
+.testimonials {
+  grid-area: testimonials;
+}
+
+/* Styling */
+.product h2 {
+  display: none;
+}
