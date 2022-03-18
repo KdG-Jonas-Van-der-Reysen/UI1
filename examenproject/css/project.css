@@ -27,6 +27,10 @@ body {
 
 main {
   grid-area: pageContent;
+
+  /* Margin & padding */
+  padding: 25px;
+  padding-top: 0;
 }
 
 /* Navbar */
@@ -84,11 +88,6 @@ ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
-}
-
-ul li ul li {
-  clear: both;
-  width: 100%;
 }
 
 /* Styling */
