@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,262 +10,273 @@
     <!-- CSS bestand -->
     <link rel="stylesheet" href="../css/project.css">
 </head>
-<body>
-<h1>Webshop de brommobiel</h1>
-<nav>
-    <h2>Menu</h2>
-    <img class="logo" src="../media/logo.png" alt="" srcset="">
-    <ul>
-        <li>
-            <a href="../index.html">Home</a>
-        </li>
-        <li class="active">
-            <a href="productoverzicht.html">Brommers</a>
-            <ul>
-                <li>
-                    <a href="productoverzicht.html#elektrisch">Elektrische brommers</a>
-                </li>
-                <li>
-                    <a href="productoverzicht.html#benzine">Benzine brommers</a>
-                </li>
-                <li>
-                    <a href="productoverzicht.html#lpg">LPG brommers</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="personalisering.html">Personalisering</a>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-        <li>
-            <a href="faq.html">FAQ</a>
-        </li>
-    </ul>
-</nav>
+
+<body id="productoverzicht">
+    <h1>Webshop de brommobiel</h1>
+    <nav>
+        <h2>Menu</h2>
+        <img class="logo" src="../media/logo.png" alt="">
+        <ul>
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li class="active">
+                <a href="productoverzicht.html">Brommers</a>
+                <ul>
+                    <li>
+                        <a href="productoverzicht.html#elektrisch">Elektrische brommers</a>
+                    </li>
+                    <li>
+                        <a href="productoverzicht.html#benzine">Benzine brommers</a>
+                    </li>
+                    <li>
+                        <a href="productoverzicht.html#lpg">LPG brommers</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="personalisering.html">Personalisering</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="faq.html">FAQ</a>
+            </li>
+        </ul>
+    </nav>
 
 
-<section>
-    <h2>Filter</h2>
+    <section id="filter">
+        <h2>Filter</h2>
 
-    <!-- Kleur -->
-    <label for="kleur">Kies een zadelkleur</label>
-    <select name="kleur" id="kleur">
-        <option value="rood" selected>Rood</option>
-        <option value="zwart">Zwart</option>
-        <option value="zwart">Grijs</option>
-        <option value="zwart">Bruin</option>
-        <option value="blauw">Blauw</option>
-        <option value="wit">Wit</option>
-    </select>
+        <!-- Kleur -->
+        <label for="kleur">Kies een zadelkleur</label>
+        <select name="kleur" id="kleur">
+            <option value="rood" selected>Rood</option>
+            <option value="zwart">Zwart</option>
+            <option value="zwart">Grijs</option>
+            <option value="zwart">Bruin</option>
+            <option value="blauw">Blauw</option>
+            <option value="wit">Wit</option>
+        </select>
 
-    <!-- Materiaal -->
-    <label for="materiaal">Kies een materiaal</label>
-    <select name="materiaal" id="materiaal">
-        <option value="zwart" selected>Metaal</option>
-        <option value="blauw">Kunststof</option>
-    </select>
+        <!-- Materiaal -->
+        <label for="materiaal">Kies een materiaal</label>
+        <select name="materiaal" id="materiaal">
+            <option value="zwart" selected>Metaal</option>
+            <option value="blauw">Kunststof</option>
+        </select>
 
-    <!-- >Maximum snelheid -->
-    <label for="snelheid">Kies een maximum snelheid</label>
-    <select name="snelheid" id="snelheid">
-        <option value="25" selected>25 km/u</option>
-        <option value="45">45 km/u</option>
-    </select>
-</section>
-
-<main>
-    <section>
-        <h2>Producten</h2>
-
-        <section id="elektrisch">
-            <h3>Elektrische brommers</h3>
-
-            <section>
-                <a href="detailpaginas/detail-segwaye125s.html">
-                    <img src="../media/elektrischeBrommers/E125S-thumb.png" alt="Thumbnail van Segway E125S">
-                </a>
-                <h4>Segway E125S</h4>
-                &euro; 3.599,00
-            </section>
-
-            <section>
-                <a href="detailpaginas/detail-segwaye110se.html">
-                    <img src="../media/elektrischeBrommers/E110SE-thumb.png" alt="Thumbnail van Segway E110SE">
-                </a>
-                <h4>Segway E110SE</h4>
-                &euro; 2.499,00
-            </section>
-
-            <section>
-                <a href="detailpaginas/detail-segwaye110s.html">
-                    <img src="../media/elektrischeBrommers/E110S-thumb.png" alt="Thumbnail van Segway E110S">
-                </a>
-                <h4>Segway E110S</h4>
-                &euro; 2.299,00
-            </section>
-
-            <section>
-                <a href="detailpaginas/detail-segwayb110s.html">
-                    <img src="../media/elektrischeBrommers/B110S-thumb.png" alt="Thumbnail van Segway B110S">
-                </a>
-                <h4>Segway B110S</h4>
-                &euro; 1.779,00
-            </section>
-
-            <section>
-                <a href="detailpaginas/detail-brekrmodelb.html">
-                    <img src="../media/elektrischeBrommers/brekrModelB-thumb.png" alt="Thumbnail van Brekr Model B">
-                </a>
-                <h4>Brekr Model B</h4>
-                &euro; 4.749,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/elektrischeBrommers/horwinEK1-thumb.png" alt="Thumbnail van Horwin EK1">
-                </a>
-                <h4>Horwin EK1</h4>
-                &euro; 2.999,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/elektrischeBrommers/NiuNQiSport-thumb.png" alt="Thumbnail van Niu NQi Sport">
-                </a>
-                <h4>NIU NQi Sport</h4>
-                &euro; 3.374,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/elektrischeBrommers/SuperSocoCUX-thumb.png" alt="Thumbnail van Super Soco CUX">
-                </a>
-                <h4>Super Soco CUX</h4>
-                &euro; 2.998,00
-            </section>
-        </section>
-
-        <section id="benzine">
-            <h3>Benzine brommers</h3>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/orbit2-thumb.png" alt="Thumbnail van Sym Orbit 2">
-                </a>
-                <h4>Sym Orbit 2</h4>
-                &euro; 2.100,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/orbit3-thumb.png" alt="Thumbnail van Sym Orbit 3">
-                </a>
-                <h4>Sym Orbit 3</h4>
-                &euro; 2.300,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/AgmVX50I-thumb.png" alt="Thumbnail van AGM VX50I">
-                </a>
-                <h4>AGM VX50I</h4>
-                &euro; 1.775,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/PeugeotKisbeeActive-thumb.png"
-                         alt="Thumbnail van Peugeot Kisbee Active">
-                </a>
-                <h4>Peugeot Kisbee Active</h4>
-                &euro; 2.298,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/PeugotKisbeeStreetline-thumb.png"
-                         alt="Thumbnail van Peugeot Kisbee Streetline">
-                </a>
-                <h4>Peugeot Kisbee Streetline</h4>
-                &euro; 2.448,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/PeugotDjango-thumb.png" alt="Thumbnail van Peugeot Django">
-                </a>
-                <h4>Peugeot Django</h4>
-                &euro; 3.398,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/benzineBrommers/PiaggioLiberty50S-thumb.png"
-                         alt="Thumbnail van Piaggio Liverty 50 S">
-                </a>
-                <h4>Piaggio Liberty 50 S</h4>
-                &euro; 2.858,00
-            </section>
-        </section>
-
-        <section id="lpg">
-            <h3>LPG Brommers</h3>
-
-            <section>
-                <a href="#">
-                    <img src="../media/lpgBrommer/primaVerra-thumb.png" alt="Thumbnail van Vespa PrimaVerra">
-                </a>
-                <h4>Vespa PrimaVerra</h4>
-                &euro; 4.000,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/lpgBrommer/VespaPrimaVeraSport-thumb.png"
-                         alt="Thumbnail van Vespa Primavera Sport">
-                </a>
-                <h4>Vespa Primavera Sport</h4>
-                &euro; 3.939,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/lpgBrommer/sprint-thumb.png" alt="Thumbnail van Vespa Sprint">
-                </a>
-                <h4>Vespa Sprint</h4>
-                &euro; 4.900,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/lpgBrommer/VespaSprintSport-thumb.png" alt="Thumbnail van Vespa Sprint Sport">
-                </a>
-                <h4>Vespa Sprint Sport</h4>
-                &euro; 4.039,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/lpgBrommer/VespaSprintNotteEuro-thumb.png"
-                         alt="Thumbnail van Vespa Sprint Notte">
-                </a>
-                <h4>Vespa Sprint Notte</h4>
-                &euro; 4.039,00
-            </section>
-
-            <section>
-                <a href="#">
-                    <img src="../media/lpgBrommer/VespaSprintRacingSixties-thumb.png"
-                         alt="Thumbnail van Vespa Sprint Racing Sixties">
-                </a>
-                <h4>Vespa Sprint Racing Sixties</h4>
-                &euro; 4.239,00
-            </section>
-
-        </section>
+        <!-- >Maximum snelheid -->
+        <label for="snelheid">Kies een maximum snelheid</label>
+        <select name="snelheid" id="snelheid">
+            <option value="25" selected>25 km/u</option>
+            <option value="45">45 km/u</option>
+        </select>
     </section>
-</main>
+
+    <main id="producten">
+        <section>
+            <h2 id="productenTitel">Producten</h2>
+
+            <section id="elektrisch">
+                <h3>Elektrische brommers</h3>
+
+                <a class="productLink" href="detailpaginas/detail-segwaye125s.html">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/E125S-thumb.png" alt="Thumbnail van Segway E125S"
+                            class="productThumbnail">
+                        <h4 class="productName">Segway E125S</h4>
+                        <p class="productPrice">&euro; 3.599,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="detailpaginas/detail-segwaye110se.html">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/E110SE-thumb.png" alt="Thumbnail van Segway E110SE"
+                            class="productThumbnail">
+                        <h4 class="productName">Segway E110SE</h4>
+                        <p class="productPrice">&euro; 2.499,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="detailpaginas/detail-segwaye110s.html">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/E110S-thumb.png" alt="Thumbnail van Segway E110S"
+                            class="productThumbnail">
+                        <h4 class="productName">Segway E110S</h4>
+                        <p class="productPrice">&euro; 2.299,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="detailpaginas/detail-segwayb110s.html">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/B110S-thumb.png" alt="Thumbnail van Segway B110S"
+                            class="productThumbnail">
+                        <h4 class="productName">Segway B110S</h4>
+                        <p class="productPrice">&euro; 1.779,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="detailpaginas/detail-brekrmodelb.html">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/brekrModelB-thumb.png" alt="Thumbnail van Brekr Model B"
+                            class="productThumbnail">
+                        <h4 class="productName">Brekr Model B</h4>
+                        <p class="productPrice">&euro; 4.749,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/horwinEK1-thumb.png" alt="Thumbnail van Horwin EK1"
+                            class="productThumbnail">
+                        <h4 class="productName">Horwin EK1</h4>
+                        <p class="productPrice">&euro; 2.999,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/NiuNQiSport-thumb.png" alt="Thumbnail van Niu NQi Sport"
+                            class="productThumbnail">
+                        <h4 class="productName">NIU NQi Sport</h4>
+                        <p class="productPrice">&euro; 3.374,00</p>
+                    </section>
+                </a>
+
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/elektrischeBrommers/SuperSocoCUX-thumb.png"
+                            alt="Thumbnail van Super Soco CUX" class="productThumbnail">
+                        <h4 class="productName">Super Soco CUX</h4>
+                        <p class="productPrice">&euro; 2.998,00</p>
+                    </section>
+                </a>
+            </section>
+
+            <section id="benzine">
+                <h3>Benzine brommers</h3>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/orbit2-thumb.png" alt="Thumbnail van Sym Orbit 2">
+                    </a>
+                    <h4>Sym Orbit 2</h4>
+                    &euro; 2.100,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/orbit3-thumb.png" alt="Thumbnail van Sym Orbit 3">
+                    </a>
+                    <h4>Sym Orbit 3</h4>
+                    &euro; 2.300,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/AgmVX50I-thumb.png" alt="Thumbnail van AGM VX50I">
+                    </a>
+                    <h4>AGM VX50I</h4>
+                    &euro; 1.775,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/PeugeotKisbeeActive-thumb.png"
+                            alt="Thumbnail van Peugeot Kisbee Active">
+                    </a>
+                    <h4>Peugeot Kisbee Active</h4>
+                    &euro; 2.298,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/PeugotKisbeeStreetline-thumb.png"
+                            alt="Thumbnail van Peugeot Kisbee Streetline">
+                    </a>
+                    <h4>Peugeot Kisbee Streetline</h4>
+                    &euro; 2.448,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/PeugotDjango-thumb.png" alt="Thumbnail van Peugeot Django">
+                    </a>
+                    <h4>Peugeot Django</h4>
+                    &euro; 3.398,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/benzineBrommers/PiaggioLiberty50S-thumb.png"
+                            alt="Thumbnail van Piaggio Liverty 50 S">
+                    </a>
+                    <h4>Piaggio Liberty 50 S</h4>
+                    &euro; 2.858,00
+                </section>
+            </section>
+
+            <section id="lpg">
+                <h3>LPG Brommers</h3>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/lpgBrommer/primaVerra-thumb.png" alt="Thumbnail van Vespa PrimaVerra">
+                    </a>
+                    <h4>Vespa PrimaVerra</h4>
+                    &euro; 4.000,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/lpgBrommer/VespaPrimaVeraSport-thumb.png"
+                            alt="Thumbnail van Vespa Primavera Sport">
+                    </a>
+                    <h4>Vespa Primavera Sport</h4>
+                    &euro; 3.939,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/lpgBrommer/sprint-thumb.png" alt="Thumbnail van Vespa Sprint">
+                    </a>
+                    <h4>Vespa Sprint</h4>
+                    &euro; 4.900,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/lpgBrommer/VespaSprintSport-thumb.png"
+                            alt="Thumbnail van Vespa Sprint Sport">
+                    </a>
+                    <h4>Vespa Sprint Sport</h4>
+                    &euro; 4.039,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/lpgBrommer/VespaSprintNotteEuro-thumb.png"
+                            alt="Thumbnail van Vespa Sprint Notte">
+                    </a>
+                    <h4>Vespa Sprint Notte</h4>
+                    &euro; 4.039,00
+                </section>
+
+                <section class="product">
+                    <a href="#">
+                        <img src="../media/lpgBrommer/VespaSprintRacingSixties-thumb.png"
+                            alt="Thumbnail van Vespa Sprint Racing Sixties">
+                    </a>
+                    <h4>Vespa Sprint Racing Sixties</h4>
+                    &euro; 4.239,00
+                </section>
+
+            </section>
+        </section>
+    </main>
 </body>
+
 </html>

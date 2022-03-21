@@ -7,7 +7,7 @@ Author: Jonas Van der Reysen
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
-body {
+body:not(#productoverzicht) {
   /* Grids */
   display: grid;
   width: 100vw;
@@ -15,14 +15,18 @@ body {
   grid-template:
     "header"
     "pageContent";
-  grid-template-rows: 0.25fr auto;
+  grid-template-rows: 0.125fr auto;
   row-gap: 25px;
 
-  /* Margin and padding */
+  /* Margin & padding */
   margin: 0;
 
   /* Font */
   font-family: "Roboto", sans-serif;
+}
+
+body.no-row-gap {
+  row-gap: 0px;
 }
 
 main {
@@ -59,7 +63,7 @@ li {
   position: relative;
   transition-duration: 0.5s;
 }
-  
+
 li a {
   color: white;
   text-decoration: none;
@@ -104,7 +108,6 @@ nav h2 {
 }
 
 /* Home - index.html */
-/* Grids */
 .home {
   display: grid;
 
@@ -113,7 +116,7 @@ nav h2 {
   grid-template-columns: 1fr 1fr;
 }
 
-.product {
+#product {
   /* Grid item */
   grid-area: product;
 
@@ -127,7 +130,7 @@ nav h2 {
   background: #9e9e9e;
   border-radius: 10px;
 
-  /* Margin and padding */
+  /* Margin & padding */
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
@@ -154,7 +157,7 @@ nav h2 {
 .productTitle {
   grid-area: productTitle;
 
-  /* Margin and padding */
+  /* Margin & padding */
   margin-top: 5px;
 
   /* Other styling */
@@ -164,7 +167,7 @@ nav h2 {
 .productText {
   grid-area: productTitle;
 
-  /* Margin and padding */
+  /* Margin & padding */
   margin-top: 45px;
 }
 
@@ -192,7 +195,7 @@ nav h2 {
 }
 
 .testimonialName {
-  font-style: normal; 
+  font-style: normal;
   display: inline;
   font-weight: 600;
 
@@ -204,8 +207,199 @@ nav h2 {
   margin-left: 10px;
 }
 
-
-/* Styling */
 .product h2 {
   display: none;
+}
+
+/* Contacteer ons - contact.html */
+main.contact {
+  display: grid;
+
+  grid-template: "contactInfo kaart";
+  grid-template-columns: 1fr 1fr;
+  row-gap: 25px;
+
+  /* Margin & padding */
+  margin: 0;
+  padding: 0;
+}
+.contactInfo {
+  grid-area: contactInfo;
+  padding: 0px 0px 0px 20px;
+  border: none;
+}
+.kaart {
+  grid-area: kaart;
+}
+.kaart iframe {
+  width: 100%;
+  height: 99%;
+  padding: 0;
+  border: none;
+}
+.contactInfo dl {
+  padding: 10px;
+
+  background: #D8D8D8;
+  border-radius: 10px;
+  margin: 0px 25px 10px 0px;
+}
+.contactInfo dt {
+  font-weight: 700;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+.contactInfo dd {
+  width: 50%;
+  padding: 0;
+  margin: 0px 0px 10px 0px;
+}
+.kaart h2 {
+  display: none;
+}
+
+/* FAQ - faq.html */
+.faq-items {
+  display: flex;
+  flex-flow: row wrap;
+  
+  background: #D8D8D8;
+
+  border: solid #D8D8D8;
+  border-radius: 10px;
+  
+  /* padding: 10px; */
+}
+.question {
+  flex-basis: 20%;
+  padding: 2px 4px;
+
+  background: #D8D8D8;
+  border-bottom: 1px solid rgb(243, 242, 242);
+
+  font-weight: 600;
+
+  /* Margin & padding */
+  padding: 7px;
+}
+.answer {
+  flex-basis: 70%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 2px 4px;
+  border-bottom: 1px solid rgb(243, 242, 242);
+
+  /* Margin & padding */
+  padding: 7px;
+}
+.question.no-bottom-border,
+.answer.no-bottom-border {
+  border-bottom: none;
+}
+
+/* Productoverzicht - productoverzicht.html */
+#productoverzicht {
+  /* Grids */
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template:
+    "header header"
+    "filter producten";
+  grid-template-rows: 0.125fr auto;
+  grid-template-columns: 0.25fr auto;
+
+  /* Margin & padding */
+  margin: 0;
+
+  /* Font */
+  font-family: "Roboto", sans-serif;
+}
+
+#filter {
+  grid-area: filter;
+}
+
+#producten {
+  /* Grid item */
+  grid-area: producten;
+}
+
+#producten>section {
+  /* Grid container */
+  display: grid;
+  grid-template:
+    "titel"
+    "elektrisch"
+    "benzine"
+    "lpg";
+}
+
+#productenTitel {
+  grid-area: titel;
+}
+
+#elektrisch {
+  /* Grid item */
+  grid-area: elektrisch;
+}
+
+#benzine {
+  /* Grid item */
+  grid-area: benzine;
+}
+
+#lpg {
+  /* Grid item */
+  grid-area: lpg; 
+}
+
+.productLink {
+  display: inline-block;
+  width: 260px;
+  height: 100px;
+
+  /* background-color: red; */
+
+  text-decoration: none;
+  color: black;
+  
+
+  /* Margin & padding */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.product {
+  background: #CECECE;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.productThumbnail {
+  position: relative;
+  float: left;
+
+  height: 80%;
+  top: 10%;
+
+  border-radius: 10px;
+
+  /* Margin & padding */
+  margin-left: 12px;
+  margin-right: 15px;
+  
+}
+
+.productName {
+  /* Margin & padding */
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+
+.productPrice {
+  margin: 0;
 }
