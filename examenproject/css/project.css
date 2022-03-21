@@ -7,6 +7,16 @@ Author: Jonas Van der Reysen
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+body {
+  background-color: #edeaea;
+
+   /* Margin & padding */
+   margin: 0;
+
+   /* Font */
+   font-family: "Roboto", sans-serif;
+}
+
 body:not(#productoverzicht) {
   /* Grids */
   display: grid;
@@ -16,17 +26,10 @@ body:not(#productoverzicht) {
     "header"
     "pageContent";
   grid-template-rows: 0.125fr auto;
-  row-gap: 25px;
-
-  /* Margin & padding */
-  margin: 0;
-
-  /* Font */
-  font-family: "Roboto", sans-serif;
 }
 
-body.no-row-gap {
-  row-gap: 0px;
+body.row-gap {
+  row-gap: 25px;
 }
 
 main {
@@ -127,7 +130,7 @@ nav h2 {
     "overMezelf"
     "overKeuze";
 
-  background: #9e9e9e;
+  background: #D8D8D8;
   border-radius: 10px;
 
   /* Margin & padding */
@@ -185,7 +188,7 @@ nav h2 {
 }
 
 .testimonial {
-  background-color: rgb(226, 226, 226);
+  background-color: white;
   box-shadow: 5px 5px 5px 0px rgb(187, 186, 186);
   border-radius: 10px;
 
@@ -305,10 +308,9 @@ main.contact {
   width: 100%;
   height: 100vh;
   grid-template:
-    "header header"
-    "filter producten";
+    "header"
+    "producten";
   grid-template-rows: 0.125fr auto;
-  grid-template-columns: 0.25fr auto;
 
   /* Margin & padding */
   margin: 0;
@@ -319,6 +321,18 @@ main.contact {
 
 #filter {
   grid-area: filter;
+  padding: 0px 25px 0px 25px;
+}
+
+label {
+  display: block;
+  
+  /* Margin & padding */
+  margin-bottom: 5px;
+}
+
+.dropdown { 
+  margin-bottom: 10px;
 }
 
 #producten {
@@ -355,10 +369,14 @@ main.contact {
   grid-area: lpg; 
 }
 
+.productCategory>h3 {
+  margin-bottom: 0;
+}
+
 .productLink {
   display: inline-block;
   width: 260px;
-  height: 100px;
+  height: 60px;
 
   /* background-color: red; */
 
@@ -372,8 +390,9 @@ main.contact {
 }
 
 .product {
-  background: #CECECE;
+  background: white;
   border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px rgb(187, 186, 186);
 
   width: 100%;
   height: 100%;
@@ -402,4 +421,10 @@ main.contact {
 
 .productPrice {
   margin: 0;
+}
+
+
+/* Overrides */
+.no-top-margin {
+  margin-top: 0;
 }

@@ -47,41 +47,39 @@
     </nav>
 
 
-    <section id="filter">
-        <h2>Filter</h2>
+    <main id="producten">
 
         <!-- Kleur -->
         <label for="kleur">Kies een zadelkleur</label>
-        <select name="kleur" id="kleur">
-            <option value="rood" selected>Rood</option>
+        <select class="dropdown" name="kleur" id="kleur">
+            <option value="reset" selected>Toon alles</option>
+            <option value="bruin">Bruin</option>
             <option value="zwart">Zwart</option>
             <option value="zwart">Grijs</option>
-            <option value="zwart">Bruin</option>
-            <option value="blauw">Blauw</option>
-            <option value="wit">Wit</option>
         </select>
+        <hr>
 
         <!-- Materiaal -->
         <label for="materiaal">Kies een materiaal</label>
-        <select name="materiaal" id="materiaal">
+        <select class="dropdown" name="materiaal" id="materiaal">
             <option value="zwart" selected>Metaal</option>
             <option value="blauw">Kunststof</option>
         </select>
+        <hr>
 
         <!-- >Maximum snelheid -->
         <label for="snelheid">Kies een maximum snelheid</label>
-        <select name="snelheid" id="snelheid">
+        <select class="dropdown" name="snelheid" id="snelheid">
             <option value="25" selected>25 km/u</option>
             <option value="45">45 km/u</option>
         </select>
-    </section>
 
-    <main id="producten">
+
         <section>
             <h2 id="productenTitel">Producten</h2>
 
-            <section id="elektrisch">
-                <h3>Elektrische brommers</h3>
+            <section class="productCategory no-top-margin" id="elektrisch">
+                <h3 class="no-top-margin">Elektrische brommers</h3>
 
                 <a class="productLink" href="detailpaginas/detail-segwaye125s.html">
                     <section class="product">
@@ -156,123 +154,129 @@
                 </a>
             </section>
 
-            <section id="benzine">
+            <section class="productCategory" id="benzine">
                 <h3>Benzine brommers</h3>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/benzineBrommers/orbit2-thumb.png" alt="Thumbnail van Sym Orbit 2">
-                    </a>
-                    <h4>Sym Orbit 2</h4>
-                    &euro; 2.100,00
-                </section>
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/benzineBrommers/orbit2-thumb.png" alt="Thumbnail van Sym Orbit 2"
+                            class="productThumbnail">
+                        <h4 class="productName">Sym Orbit 2</h4>
+                        <p class="productPrice">&euro; 2.100,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/benzineBrommers/orbit3-thumb.png" alt="Thumbnail van Sym Orbit 3">
-                    </a>
-                    <h4>Sym Orbit 3</h4>
-                    &euro; 2.300,00
-                </section>
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/benzineBrommers/orbit3-thumb.png" alt="Thumbnail van Sym Orbit 3"
+                            class="productThumbnail">
+                        <h4 class="productName">Sym Orbit 3</h4>
+                        <p class="productPrice">&euro; 2.300,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/benzineBrommers/AgmVX50I-thumb.png" alt="Thumbnail van AGM VX50I">
-                    </a>
-                    <h4>AGM VX50I</h4>
-                    &euro; 1.775,00
-                </section>
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/benzineBrommers/AgmVX50I-thumb.png" alt="Thumbnail van AGM VX50I"
+                            class="productThumbnail">
+                        <h4 class="productName">AGM VX50I</h4>
+                        <p class="productPrice">&euro; 1.775,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
+                <a class="productLink" href="#">
+                    <section class="product">
                         <img src="../media/benzineBrommers/PeugeotKisbeeActive-thumb.png"
-                            alt="Thumbnail van Peugeot Kisbee Active">
-                    </a>
-                    <h4>Peugeot Kisbee Active</h4>
-                    &euro; 2.298,00
-                </section>
+                            alt="Thumbnail van Peugeot Kisbee Active" class="productThumbnail">
+                        <h4 class="productName">Peugeot Kisbee Act.</h4>
+                        <p class="productPrice">&euro; 2.298,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
+                <a class="productLink" href="#">
+                    <section class="product">
                         <img src="../media/benzineBrommers/PeugotKisbeeStreetline-thumb.png"
-                            alt="Thumbnail van Peugeot Kisbee Streetline">
-                    </a>
-                    <h4>Peugeot Kisbee Streetline</h4>
-                    &euro; 2.448,00
-                </section>
+                            alt="Thumbnail van Peugeot Kisbee Streetline" class="productThumbnail">
+                        <h4 class="productName">Peugeot Kisbee Strt.</h4>
+                        <p class="productPrice">&euro; 2.448,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/benzineBrommers/PeugotDjango-thumb.png" alt="Thumbnail van Peugeot Django">
-                    </a>
-                    <h4>Peugeot Django</h4>
-                    &euro; 3.398,00
-                </section>
+                <a class="productLink" href="#">
+                    <section class="product">
+                        <img src="../media/benzineBrommers/PeugotDjango-thumb.png" alt="Thumbnail van Peugeot Django"
+                            class="productThumbnail">
+                        <h4 class="productName">Peugeot Django</h4>
+                        <p class="productPrice">&euro; 3.398,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
+                <a class="productLink" href="#">
+                    <section class="product">
                         <img src="../media/benzineBrommers/PiaggioLiberty50S-thumb.png"
-                            alt="Thumbnail van Piaggio Liverty 50 S">
-                    </a>
-                    <h4>Piaggio Liberty 50 S</h4>
-                    &euro; 2.858,00
-                </section>
+                            alt="Thumbnail van Piaggio Liverty 50 S" class="productThumbnail">
+                        <h4 class="productName">Piaggio Liberty 50 S</h4>
+                        <p class="productPrice">&euro; 2.858,00</p>
+                    </section>
+                </a>
             </section>
 
-            <section id="lpg">
+            <section class="productCategory" id="lpg">
                 <h3>LPG Brommers</h3>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/lpgBrommer/primaVerra-thumb.png" alt="Thumbnail van Vespa PrimaVerra">
-                    </a>
-                    <h4>Vespa PrimaVerra</h4>
-                    &euro; 4.000,00
-                </section>
+                <a href="#" class="productLink">
+                    <section class="product">
+                        <img src="../media/lpgBrommer/primaVerra-thumb.png" alt="Thumbnail van Vespa PrimaVerra"
+                            class="productThumbnail">
+                        <h4 class="productName">Vespa PrimaVerra</h4>
+                        <p class="productPrice">&euro; 4.000,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
+                <a href="#" class="productLink">
+                    <section class="product">
                         <img src="../media/lpgBrommer/VespaPrimaVeraSport-thumb.png"
-                            alt="Thumbnail van Vespa Primavera Sport">
-                    </a>
-                    <h4>Vespa Primavera Sport</h4>
-                    &euro; 3.939,00
-                </section>
+                            alt="Thumbnail van Vespa Primavera Sport" class="productThumbnail">
+                        <h4 class="productName">Vespa Primavera Sport</h4>
+                        <p class="productPrice">&euro; 3.939,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/lpgBrommer/sprint-thumb.png" alt="Thumbnail van Vespa Sprint">
-                    </a>
-                    <h4>Vespa Sprint</h4>
-                    &euro; 4.900,00
-                </section>
+                <a href="#" class="productLink">
+                    <section class="product">
+                        <img src="../media/lpgBrommer/sprint-thumb.png" alt="Thumbnail van Vespa Sprint"
+                            class="productThumbnail">
+                        <h4 class="productName">Vespa Sprint</h4>
+                        <p class="productPrice">&euro; 4.900,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
-                        <img src="../media/lpgBrommer/VespaSprintSport-thumb.png"
-                            alt="Thumbnail van Vespa Sprint Sport">
-                    </a>
-                    <h4>Vespa Sprint Sport</h4>
-                    &euro; 4.039,00
-                </section>
+                <a href="#" class="productLink">
+                    <section class="product">
+                        <img src="../media/lpgBrommer/VespaSprintSport-thumb.png" alt="Thumbnail van Vespa Sprint Sport"
+                            class="productThumbnail">
+                        <h4 class="productName">Vespa Sprint Sport</h4>
+                        <p class="productPrice">&euro; 4.039,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
+                <a href="#" class="productLink">
+                    <section class="product">
                         <img src="../media/lpgBrommer/VespaSprintNotteEuro-thumb.png"
-                            alt="Thumbnail van Vespa Sprint Notte">
-                    </a>
-                    <h4>Vespa Sprint Notte</h4>
-                    &euro; 4.039,00
-                </section>
+                            alt="Thumbnail van Vespa Sprint Notte" class="productThumbnail">
+                        <h4 class="productName">Vespa Sprint Notte</h4>
+                        <p class="productPrice">&euro; 4.039,00</p>
+                    </section>
+                </a>
 
-                <section class="product">
-                    <a href="#">
+                <a href="#" class="productLink">
+                    <section class="product">
                         <img src="../media/lpgBrommer/VespaSprintRacingSixties-thumb.png"
-                            alt="Thumbnail van Vespa Sprint Racing Sixties">
-                    </a>
-                    <h4>Vespa Sprint Racing Sixties</h4>
-                    &euro; 4.239,00
-                </section>
+                            alt="Thumbnail van Vespa Sprint Racing Sixties" class="productThumbnail">
+                        <h4 class="productName">Vespa Sprint R. S. </h4>
+                        <p class="productPrice">&euro; 4.239,00</p>
+                    </section>
+                </a>
 
             </section>
         </section>
