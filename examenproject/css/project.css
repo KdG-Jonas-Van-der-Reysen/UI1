@@ -155,6 +155,7 @@ nav h2 {
   grid-area: productImage;
 
   width: 100%;
+  border-radius: 10px;
 }
 
 .productTitle {
