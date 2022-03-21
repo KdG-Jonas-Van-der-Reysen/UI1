@@ -308,9 +308,10 @@ main.contact {
   width: 100%;
   height: 100vh;
   grid-template:
-    "header"
-    "producten";
+    "header header"
+    "filter producten";
   grid-template-rows: 0.125fr auto;
+  grid-template-columns: 2.6fr 8fr;
 
   /* Margin & padding */
   margin: 0;
@@ -322,6 +323,15 @@ main.contact {
 #filter {
   grid-area: filter;
   padding: 0px 25px 0px 25px;
+}
+
+.filterLabel {
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* Margin & padding */
+  padding: 10px;
 }
 
 label {
@@ -423,8 +433,47 @@ label {
   margin: 0;
 }
 
+/* Filter voor zwart */
+input[type="radio"][id="zwart"]:checked ~ section a.bruin,
+input[type="radio"][id="zwart"]:checked ~ section a.grijs {
+  display: none;
+}
+
+/* Filter voor grijs */
+input[type="radio"][id="grijs"]:checked ~ section a.zwart,
+input[type="radio"][id="grijs"]:checked ~ section a.bruin {
+  display: none;
+}
+
+/* Filter voor bruin */
+input[type="radio"][id="bruin"]:checked ~ section a.zwart,
+input[type="radio"][id="bruin"]:checked ~ section a.grijs {
+  display: none;
+}
+
+/* Filter voor leer */
+input[type="radio"][id="leer"]:checked ~ section a.kunstleer,
+input[type="radio"][id="leer"]:checked ~ section a.kunststof {
+  display: none;
+}
+
+/* Filter voor kunstleer */
+input[type="radio"][id="kunstleer"]:checked ~ section a.leer,
+input[type="radio"][id="kunstleer"]:checked ~ section a.kunststof {
+  display: none;
+}
+
+/* Filter voor kunststof */
+input[type="radio"][id="kunststof"]:checked ~ section a.kunstleer,
+input[type="radio"][id="kunststof"]:checked ~ section a.leer {
+  display: none;
+}
 
 /* Overrides */
 .no-top-margin {
   margin-top: 0;
+}
+
+.hide {
+  display: none;
 }

@@ -46,34 +46,42 @@
         </ul>
     </nav>
 
+    <section id="filter">
+        <h2>Filter</h2>
+
+        <!-- Zadelkleur -->
+        <section>
+            <h3>Kies je zadelkleur</h3>
+            <label class="filterLabel" for="alleKleuren">Toon alles</label>
+            <label class="filterLabel" for="zwart">Zwart</label>
+            <label class="filterLabel" for="bruin">Bruin</label>
+            <label class="filterLabel" for="grijs">Grijs</label>
+        </section>
+
+        <!-- Materiaal -->
+        <section>
+            <h3>Kies je materiaal</h3>
+            <label class="filterLabel" for="alleMaterialen">Toon alles</label>
+            <label class="filterLabel" for="leer">Leer</label>
+            <label class="filterLabel" for="kunstleer">Kunstleer</label>
+            <label class="filterLabel" for="kunststof">Kunststof</label>
+        </section>
+    </section>
+
 
     <main id="producten">
 
-        <!-- Kleur -->
-        <label for="kleur">Kies een zadelkleur</label>
-        <select class="dropdown" name="kleur" id="kleur">
-            <option value="reset" selected>Toon alles</option>
-            <option value="bruin">Bruin</option>
-            <option value="zwart">Zwart</option>
-            <option value="zwart">Grijs</option>
-        </select>
-        <hr>
+        <!-- Radio zadelkleur -->
+        <input class="hide" type="radio" name="zadelkleur" value="alleKleuren" id="alleKleuren">
+        <input class="hide" type="radio" name="zadelkleur" value="zwart" id="zwart">
+        <input class="hide" type="radio" name="zadelkleur" value="bruin" id="bruin">
+        <input class="hide" type="radio" name="zadelkleur" value="grijs" id="grijs">
 
-        <!-- Materiaal -->
-        <label for="materiaal">Kies een materiaal</label>
-        <select class="dropdown" name="materiaal" id="materiaal">
-            <option value="zwart" selected>Metaal</option>
-            <option value="blauw">Kunststof</option>
-        </select>
-        <hr>
-
-        <!-- >Maximum snelheid -->
-        <label for="snelheid">Kies een maximum snelheid</label>
-        <select class="dropdown" name="snelheid" id="snelheid">
-            <option value="25" selected>25 km/u</option>
-            <option value="45">45 km/u</option>
-        </select>
-
+        <!-- Radio materiaal zadel -->
+        <input class="hide" type="radio" name="zadelmateriaal" value="alleMaterialen" id="alleMaterialen">
+        <input class="hide" type="radio" name="zadelmateriaal" value="leer" id="leer">
+        <input class="hide" type="radio" name="zadelmateriaal" value="kunstleer" id="kunstleer">
+        <input class="hide" type="radio" name="zadelmateriaal" value="kunststof" id="kunststof">
 
         <section>
             <h2 id="productenTitel">Producten</h2>
@@ -81,7 +89,7 @@
             <section class="productCategory no-top-margin" id="elektrisch">
                 <h3 class="no-top-margin">Elektrische brommers</h3>
 
-                <a class="productLink" href="detailpaginas/detail-segwaye125s.html">
+                <a class="productLink bruin kunststof" href="detailpaginas/detail-segwaye125s.html">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/E125S-thumb.png" alt="Thumbnail van Segway E125S"
                             class="productThumbnail">
@@ -90,7 +98,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="detailpaginas/detail-segwaye110se.html">
+                <a class="productLink zwart kunststof" href="detailpaginas/detail-segwaye110se.html">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/E110SE-thumb.png" alt="Thumbnail van Segway E110SE"
                             class="productThumbnail">
@@ -99,7 +107,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="detailpaginas/detail-segwaye110s.html">
+                <a class="productLink zwart kunstleer" href="detailpaginas/detail-segwaye110s.html">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/E110S-thumb.png" alt="Thumbnail van Segway E110S"
                             class="productThumbnail">
@@ -108,7 +116,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="detailpaginas/detail-segwayb110s.html">
+                <a class="productLink grijs kunstleer" href="detailpaginas/detail-segwayb110s.html">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/B110S-thumb.png" alt="Thumbnail van Segway B110S"
                             class="productThumbnail">
@@ -117,7 +125,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="detailpaginas/detail-brekrmodelb.html">
+                <a class="productLink zwart leer" href="detailpaginas/detail-brekrmodelb.html">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/brekrModelB-thumb.png" alt="Thumbnail van Brekr Model B"
                             class="productThumbnail">
@@ -126,7 +134,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart kunstleer" href="#">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/horwinEK1-thumb.png" alt="Thumbnail van Horwin EK1"
                             class="productThumbnail">
@@ -135,7 +143,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart kunststof" href="#">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/NiuNQiSport-thumb.png" alt="Thumbnail van Niu NQi Sport"
                             class="productThumbnail">
@@ -144,7 +152,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink bruin kunststof" href="#">
                     <section class="product">
                         <img src="../media/elektrischeBrommers/SuperSocoCUX-thumb.png"
                             alt="Thumbnail van Super Soco CUX" class="productThumbnail">
@@ -157,7 +165,7 @@
             <section class="productCategory" id="benzine">
                 <h3>Benzine brommers</h3>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart leer" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/orbit2-thumb.png" alt="Thumbnail van Sym Orbit 2"
                             class="productThumbnail">
@@ -166,7 +174,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart leer" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/orbit3-thumb.png" alt="Thumbnail van Sym Orbit 3"
                             class="productThumbnail">
@@ -175,7 +183,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink grijs kunststof" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/AgmVX50I-thumb.png" alt="Thumbnail van AGM VX50I"
                             class="productThumbnail">
@@ -184,7 +192,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart kunstleer" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/PeugeotKisbeeActive-thumb.png"
                             alt="Thumbnail van Peugeot Kisbee Active" class="productThumbnail">
@@ -193,7 +201,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart kunstleer" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/PeugotKisbeeStreetline-thumb.png"
                             alt="Thumbnail van Peugeot Kisbee Streetline" class="productThumbnail">
@@ -202,7 +210,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink bruin leer" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/PeugotDjango-thumb.png" alt="Thumbnail van Peugeot Django"
                             class="productThumbnail">
@@ -211,7 +219,7 @@
                     </section>
                 </a>
 
-                <a class="productLink" href="#">
+                <a class="productLink zwart kunstleer" href="#">
                     <section class="product">
                         <img src="../media/benzineBrommers/PiaggioLiberty50S-thumb.png"
                             alt="Thumbnail van Piaggio Liverty 50 S" class="productThumbnail">
@@ -224,7 +232,7 @@
             <section class="productCategory" id="lpg">
                 <h3>LPG Brommers</h3>
 
-                <a href="#" class="productLink">
+                <a href="#" class="productLink bruin leer">
                     <section class="product">
                         <img src="../media/lpgBrommer/primaVerra-thumb.png" alt="Thumbnail van Vespa PrimaVerra"
                             class="productThumbnail">
@@ -233,7 +241,7 @@
                     </section>
                 </a>
 
-                <a href="#" class="productLink">
+                <a href="#" class="productLink zwart leer">
                     <section class="product">
                         <img src="../media/lpgBrommer/VespaPrimaVeraSport-thumb.png"
                             alt="Thumbnail van Vespa Primavera Sport" class="productThumbnail">
@@ -242,7 +250,7 @@
                     </section>
                 </a>
 
-                <a href="#" class="productLink">
+                <a href="#" class="productLink zwart leer">
                     <section class="product">
                         <img src="../media/lpgBrommer/sprint-thumb.png" alt="Thumbnail van Vespa Sprint"
                             class="productThumbnail">
@@ -251,7 +259,7 @@
                     </section>
                 </a>
 
-                <a href="#" class="productLink">
+                <a href="#" class="productLink grijs leer">
                     <section class="product">
                         <img src="../media/lpgBrommer/VespaSprintSport-thumb.png" alt="Thumbnail van Vespa Sprint Sport"
                             class="productThumbnail">
@@ -260,7 +268,7 @@
                     </section>
                 </a>
 
-                <a href="#" class="productLink">
+                <a href="#" class="productLink zwart kunstleer">
                     <section class="product">
                         <img src="../media/lpgBrommer/VespaSprintNotteEuro-thumb.png"
                             alt="Thumbnail van Vespa Sprint Notte" class="productThumbnail">
@@ -269,7 +277,7 @@
                     </section>
                 </a>
 
-                <a href="#" class="productLink">
+                <a href="#" class="productLink grijs leer">
                     <section class="product">
                         <img src="../media/lpgBrommer/VespaSprintRacingSixties-thumb.png"
                             alt="Thumbnail van Vespa Sprint Racing Sixties" class="productThumbnail">
