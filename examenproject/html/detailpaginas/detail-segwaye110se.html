@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,102 +10,114 @@
     <!-- CSS bestand -->
     <link rel="stylesheet" href="../../css/project.css">
 </head>
+
 <body>
-<h1>Webshop de brommobiel</h1>
-<nav>
-    <h2>Menu</h2>
-    <img class="logo" src="../../media/logo.png" alt="" >
-    <ul>
-        <li>
-            <a href="../../index.html">Home</a>
-        </li>
-        <li>
-            <a href="../productoverzicht.html">Brommers</a>
-            <ul>
-                <li>
-                    <a href="../productoverzicht.html#elektrisch">Elektrische brommers</a>
-                </li>
-                <li>
-                    <a href="../productoverzicht.html#benzine">Benzine brommers</a>
-                </li>
-                <li>
-                    <a href="../productoverzicht.html#lpg">LPG brommers</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="../personalisering.html">Personalisering</a>
-        </li>
-        <li>
-            <a href="../contact.html">Contact</a>
-        </li>
-        <li>
-            <a href="../faq.html">FAQ</a>
-        </li>
-    </ul>
-</nav>
-<main>
-    <section>
-        <h2>Segway E110SE</h2>
-        <section>
+    <h1>Webshop de brommobiel</h1>
+    <nav>
+        <h2>Menu</h2>
+        <img class="logo" src="../../media/logo.png" alt="">
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../productoverzicht.html">Brommers</a>
+                <ul>
+                    <li>
+                        <a href="../productoverzicht.html#elektrisch">Elektrische brommers</a>
+                    </li>
+                    <li>
+                        <a href="../productoverzicht.html#benzine">Benzine brommers</a>
+                    </li>
+                    <li>
+                        <a href="../productoverzicht.html#lpg">LPG brommers</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="../personalisering.html">Personalisering</a>
+            </li>
+            <li>
+                <a href="../contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../faq.html">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="productdetails">
+        <section id="hoofdInfo">
+            <h2>Segway E110SE</h2>
             <h3>Korte beschrijving</h3>
             <p>De nieuwe, modieuze en duurzame manier van rijden ontdek je met de Segway eScooter E110SE!</p>
             De E110SE dankt haar premium look & veel aan de luxe chromen details en cognac afwerking, de grote maximaal
             haalbare actieradius tot wel 140 km* (WMTC-actieradius: tot 102 km (25 km/u versie) ; tot 81 km (45 km/u
             versie)) en de vele functies die in de mobiele app zijn ge&iuml;ntegreerd. Dankzij de stille motor rijd je
-            in alle rust en stijl naar waar je maar wilt! Door het compacte design van deze scooter heb je amper 2,5 m<sup>2</sup> plaats nodig in je garage.
+            in alle rust en stijl naar waar je maar wilt! Door het compacte design van deze scooter heb je amper 2,5
+            m<sup>2</sup> plaats nodig in je garage.
         </section>
-        <section>
-            <h3>Uitgebreide beschrijving</h3>
-            <p>
-                Segway is terug met een compleet nieuwe serie elektrische scooters. Het merk onderscheid zich al jaren
-                op
-                het gebied van elektrische mobiliteit waarbij innovatie en kwaliteit vooraan staan. De Segway E110SE is
-                leverbaar in een 25km snor versie en een 45km brom versie. De Segway heeft een maximale range van 140km.
-                Dit
-                allemaal mogelijk door twee Lithium Ion accu. Uniek, deze e-scooter heeft ABS!
-            </p>
-            <p>
-                Ben je op zoek naar een elektrische scooter met veel gadgets? Dan is de Segway de juiste scooter voor
-                jou!
-                Onder andere een slim ux dasboard die veranderd zodra je op het zadel gaat zitten. Heb je Air-lock
-                geactiveerd in de Segway app? Dan gaat de scooter automatisch op slot en stuurslot zodra je van de
-                scooter
-                afstapt.
-            </p>
+
+        <section id="extraInfo">
+            <h2 class="hide">Extra info</h2>
+            <input class="hide" type="radio" checked name="tabselectie" value="beschrijving" id="switch-beschrijving">
+            <label class="tabSwitcherLabel" for="switch-beschrijving">Uitgebreide beschrijving</label>
+            
+            <input class="hide" type="radio" name="tabselectie" value="eigenschappen" id="switch-eigenschappen">
+            <label class="tabSwitcherLabel" for="switch-eigenschappen">Eigenschappen</label>
+            
+            <section id="uitgebreideBeschrijving">
+                <h3>Uitgebreide beschrijving</h3>
+                <p>
+                    Segway is terug met een compleet nieuwe serie elektrische scooters. Het merk onderscheid zich al jaren
+                    op
+                    het gebied van elektrische mobiliteit waarbij innovatie en kwaliteit vooraan staan. De Segway E110SE is
+                    leverbaar in een 25km snor versie en een 45km brom versie. De Segway heeft een maximale range van 140km.
+                    Dit
+                    allemaal mogelijk door twee Lithium Ion accu. Uniek, deze e-scooter heeft ABS!
+                </p>
+                <p>
+                    Ben je op zoek naar een elektrische scooter met veel gadgets? Dan is de Segway de juiste scooter voor
+                    jou!
+                    Onder andere een slim ux dasboard die veranderd zodra je op het zadel gaat zitten. Heb je Air-lock
+                    geactiveerd in de Segway app? Dan gaat de scooter automatisch op slot en stuurslot zodra je van de
+                    scooter
+                    afstapt.
+                </p>
+            </section>
+            <section id="eigenschappen">
+                <h3>Eigenschappen</h3>
+                <table>
+                    <tr>
+                        <td>
+                            Maximum snelheid
+                        </td>
+                        <td>45 km/u</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Zadelkleur
+                        </td>
+                        <td>
+                            Zwart
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Materiaal zadel
+                        </td>
+                        <td>
+                            Kunststof
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </section>
-        <section>
-            <h3>Eigenschappen</h3>
-            <table>
-                <tr>
-                    <td>
-                        Maximum snelheid
-                    </td>
-                    <td>45 km/u</td>
-                </tr>
-                <tr>
-                    <td>
-                        Zadelkleur
-                    </td>
-                    <td>
-                        Zwart
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Materiaal zadel
-                    </td>
-                    <td>
-                        Kunststof
-                    </td>
-                </tr>
-            </table>
-        </section>
-        <section>
-            <h3>Afbeelding van de scooter</h3>
+
+        <section id="afbeelding">
+            <h3 class="hide">Afbeelding van de scooter</h3>
             <img src="../../media/elektrischeBrommers/E110SE.png" alt="Segway E110SE">
         </section>
-    </section>
-</main>
+    </main>
 </body>
+
 </html>

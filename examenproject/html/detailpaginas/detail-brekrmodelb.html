@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,95 +10,108 @@
     <!-- CSS bestand -->
     <link rel="stylesheet" href="../../css/project.css">
 </head>
+
 <body>
-<h1>Webshop de brommobiel</h1>
-<nav>
-    <h2>Menu</h2>
-    <img class="logo" src="../../media/logo.png" alt="" >
-    <ul>
-        <li>
-            <a href="../../index.html">Home</a>
-        </li>
-        <li>
-            <a href="../productoverzicht.html">Brommers</a>
-            <ul>
-                <li>
-                    <a href="../productoverzicht.html#elektrisch">Elektrische brommers</a>
-                </li>
-                <li>
-                    <a href="../productoverzicht.html#benzine">Benzine brommers</a>
-                </li>
-                <li>
-                    <a href="../productoverzicht.html#lpg">LPG brommers</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="../personalisering.html">Personalisering</a>
-        </li>
-        <li>
-            <a href="../contact.html">Contact</a>
-        </li>
-        <li>
-            <a href="../faq.html">FAQ</a>
-        </li>
-    </ul>
-</nav>
-<main>
-    <section>
-        <h2>Brekr Model B</h2>
-        <section>
+    <h1>Webshop de brommobiel</h1>
+    <nav>
+        <h2>Menu</h2>
+        <img class="logo" src="../../media/logo.png" alt="">
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../productoverzicht.html">Brommers</a>
+                <ul>
+                    <li>
+                        <a href="../productoverzicht.html#elektrisch">Elektrische brommers</a>
+                    </li>
+                    <li>
+                        <a href="../productoverzicht.html#benzine">Benzine brommers</a>
+                    </li>
+                    <li>
+                        <a href="../productoverzicht.html#lpg">LPG brommers</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="../personalisering.html">Personalisering</a>
+            </li>
+            <li>
+                <a href="../contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../faq.html">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="productdetails">
+        <section id="hoofdInfo">
+            <h2>Brekr Model B</h2>
             <h3>Korte beschrijving</h3>
             <p>De Brekr Brommer, om je botten mee te breken</p>
             De toekomst is elektrisch en connected. Rijd in de toekomst op jouw manier. De Brekr Model B is verkrijgbaar
             vanaf 4.749 euro.
         </section>
-        <section>
-            <h3>Uitgebreide beschrijving</h3>
-            <p>
-                Ons verhaal! Waarom we de Brekr Model B maken? Simpel, omdat een logische elektrische brommer nog niet
-                bestond. Deze quote uit onze reclame zegt het helemaal: "See change, as a chance. To build on what we love."
-            </p>
-            <p>
-                Hoe neem je de historie van motoren en brommers mee naar <em>een nieuw en krachtig design?</em> Wat verandert er
-                als er geen benzine maar elektriciteit door de aderen van de machine stroomt? De nieuwe* werkelijkheid
-                hebben we versmolten met al het moois van weleer. Het resultaat is een beeldschoon en eerlijk ontwerp
-                waarbij we de toekomst omarmen, dat na veel bloed, zweet en tranen eindelijk beschikbaar is sinds <time datetime="2021-12-31">31/12/2021</time>.
-            </p>
-            <small>* Zo super nieuw nu ook weer niet, maar toch nieuw genoeg om het te mogen noemen!</small>
+
+        <section id="extraInfo">
+            <h2 class="hide">Extra info</h2>
+            <input class="hide" type="radio" checked name="tabselectie" value="beschrijving" id="switch-beschrijving">
+            <label class="tabSwitcherLabel" for="switch-beschrijving">Uitgebreide beschrijving</label>
+            
+            <input class="hide" type="radio" name="tabselectie" value="eigenschappen" id="switch-eigenschappen">
+            <label class="tabSwitcherLabel" for="switch-eigenschappen">Eigenschappen</label>
+            
+            <section id="uitgebreideBeschrijving">
+                <h3>Uitgebreide beschrijving</h3>
+                <p>
+                    Ons verhaal! Waarom we de Brekr Model B maken? Simpel, omdat een logische elektrische brommer nog niet
+                    bestond. Deze quote uit onze reclame zegt het helemaal: "See change, as a chance. To build on what we
+                    love."
+                </p>
+                <p>
+                    Hoe neem je de historie van motoren en brommers mee naar <em>een nieuw en krachtig design?</em> Wat
+                    verandert er
+                    als er geen benzine maar elektriciteit door de aderen van de machine stroomt? De nieuwe* werkelijkheid
+                    hebben we versmolten met al het moois van weleer. Het resultaat is een beeldschoon en eerlijk ontwerp
+                    waarbij we de toekomst omarmen, dat na veel bloed, zweet en tranen eindelijk beschikbaar is sinds <time
+                        datetime="2021-12-31">31/12/2021</time>.
+                </p>
+                <small>* Zo super nieuw nu ook weer niet, maar toch nieuw genoeg om het te mogen noemen!</small>
+            </section>
+            <section id="eigenschappen">
+                <h3>Eigenschappen</h3>
+                <table>
+                    <tr>
+                        <td>
+                            Maximum snelheid
+                        </td>
+                        <td>45 km/u</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Zadelkleur
+                        </td>
+                        <td>
+                            Zwart
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Materiaal zadel
+                        </td>
+                        <td>
+                            Leer
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </section>
-        <section>
-            <h3>Eigenschappen</h3>
-            <table>
-                <tr>
-                    <td>
-                        Maximum snelheid
-                    </td>
-                    <td>45 km/u</td>
-                </tr>
-                <tr>
-                    <td>
-                        Zadelkleur
-                    </td>
-                    <td>
-                        Zwart
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Materiaal zadel
-                    </td>
-                    <td>
-                        Leer
-                    </td>
-                </tr>
-            </table>
-        </section>
-        <section>
-            <h3>Afbeelding van de scooter</h3>
+        <section id="afbeelding">
+            <h3 class="hide">Afbeelding van de scooter</h3>
             <img src="../../media/elektrischeBrommers/brekrModelB.png" alt="Brekr Model B">
         </section>
-    </section>
-</main>
+    </main>
 </body>
+
 </html>

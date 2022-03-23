@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,45 +10,44 @@
     <!-- CSS bestand -->
     <link rel="stylesheet" href="../../css/project.css">
 </head>
+
 <body>
-<h1>Webshop de brommobiel</h1>
-<nav>
-    <h2>Menu</h2>
-    <img class="logo" src="../../media/logo.png" alt="" >
-    <ul>
-        <li>
-            <a href="../../index.html">Home</a>
-        </li>
-        <li>
-            <a href="../productoverzicht.html">Brommers</a>
-            <ul>
-                <li>
-                    <a href="../productoverzicht.html#elektrisch">Elektrische brommers</a>
-                </li>
-                <li>
-                    <a href="../productoverzicht.html#benzine">Benzine brommers</a>
-                </li>
-                <li>
-                    <a href="../productoverzicht.html#lpg">LPG brommers</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="../personalisering.html">Personalisering</a>
-        </li>
-        <li>
-            <a href="../contact.html">Contact</a>
-        </li>
-        <li>
-            <a href="../faq.html">FAQ</a>
-        </li>
-    </ul>
-</nav>
-<main>
-    <section>
-        <h2>Segway B110S</h2>
-        <section>
-            <h3>Korte beschrijving</h3>
+    <h1>Webshop de brommobiel</h1>
+    <nav>
+        <h2>Menu</h2>
+        <img class="logo" src="../../media/logo.png" alt="">
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../productoverzicht.html">Brommers</a>
+                <ul>
+                    <li>
+                        <a href="../productoverzicht.html#elektrisch">Elektrische brommers</a>
+                    </li>
+                    <li>
+                        <a href="../productoverzicht.html#benzine">Benzine brommers</a>
+                    </li>
+                    <li>
+                        <a href="../productoverzicht.html#lpg">LPG brommers</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="../personalisering.html">Personalisering</a>
+            </li>
+            <li>
+                <a href="../contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../faq.html">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="productdetails">
+        <section id="hoofdInfo">
+            <h2>Segway B110S</h2>
             <p>Segway eBrommer, om er nog gekker uit te zien!</p>
             Ontdek en rij met de eerste slimme Segway eBrommer B110S naar een kleurrijke wereld vol plezier en spanning!
             Je kunt gemakkelijk overal naartoe rijden dankzij de maximaal haalbare actieradius tot 105 km* (WMTC
@@ -56,50 +56,60 @@
             eBrommer dankzij zijn cruise control-modus maximaal comfort. Dankzij de frisse look, het lichte frame en de
             gemakkelijk te gebruiken functies, is dit de perfecte eBrommer om in de straten van je stad te rijden!
         </section>
-        <section>
-            <h3>Uitgebreide beschrijving</h3>
-            <p>
-                Segway is terug met een compleet nieuwe serie elektrische scooters. Het merk onderscheid zich al jaren
-                op het gebied van elektrische mobiliteit waarbij innovatie en kwaliteit vooraan staan. De Segway B110S
-                is leverbaar in een 25km snor versie en een 45km brom versie. De Segway heeft een maximale range van
-                105km. Dit allemaal mogelijk door een Lithium Ion accu.
-            </p>
-            <p>
-                Dit betreft de nieuwste euro5 uitvoering met een 48V 30AH accu en een 850 watt motor.
-            </p>
+
+        <section id="extraInfo">
+            <h2 class="hide">Extra info</h2>
+            <input class="hide" type="radio" checked name="tabselectie" value="beschrijving" id="switch-beschrijving">
+            <label class="tabSwitcherLabel" for="switch-beschrijving">Uitgebreide beschrijving</label>
+            
+            <input class="hide" type="radio" name="tabselectie" value="eigenschappen" id="switch-eigenschappen">
+            <label class="tabSwitcherLabel" for="switch-eigenschappen">Eigenschappen</label>
+            
+            <section id="uitgebreideBeschrijving">
+                <h3>Uitgebreide beschrijving</h3>
+                <p>
+                    Segway is terug met een compleet nieuwe serie elektrische scooters. Het merk onderscheid zich al jaren
+                    op het gebied van elektrische mobiliteit waarbij innovatie en kwaliteit vooraan staan. De Segway B110S
+                    is leverbaar in een 25km snor versie en een 45km brom versie. De Segway heeft een maximale range van
+                    105km. Dit allemaal mogelijk door een Lithium Ion accu.
+                </p>
+                <p>
+                    Dit betreft de nieuwste euro5 uitvoering met een 48V 30AH accu en een 850 watt motor.
+                </p>
+            </section>
+            <section id="eigenschappen">
+                <h3>Eigenschappen</h3>
+                <table>
+                    <tr>
+                        <td>
+                            Maximum snelheid
+                        </td>
+                        <td>45 km/u</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Zadelkleur
+                        </td>
+                        <td>
+                            Grijs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Materiaal zadel
+                        </td>
+                        <td>
+                            Kunstleer
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </section>
-        <section>
-            <h3>Eigenschappen</h3>
-            <table>
-                <tr>
-                    <td>
-                        Maximum snelheid
-                    </td>
-                    <td>45 km/u</td>
-                </tr>
-                <tr>
-                    <td>
-                        Zadelkleur
-                    </td>
-                    <td>
-                        Grijs
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Materiaal zadel
-                    </td>
-                    <td>
-                        Kunstleer
-                    </td>
-                </tr>
-            </table>
-        </section>
-        <section>
-            <h3>Afbeelding van de scooter</h3>
+        <section id="afbeelding">
+            <h3 class="hide">Afbeelding van de scooter</h3>
             <img src="../../media/elektrischeBrommers/B110S.png" alt="Segway B110S">
         </section>
-    </section>
-</main>
+    </main>
 </body>
+
 </html>
