@@ -22,7 +22,7 @@ body:not(#productoverzicht) {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template:
+  grid-template-areas:
     "header"
     "pageContent";
   grid-template-rows: 0.125fr auto;
@@ -121,7 +121,7 @@ nav h2 {
   display: grid;
 
   column-gap: 2vw;
-  grid-template: "product testimonials";
+  grid-template-areas: "product testimonials";
   grid-template-columns: 1fr 1fr;
 }
 
@@ -131,7 +131,7 @@ nav h2 {
 
   /* Grid container */
   display: grid;
-  grid-template:
+  grid-template-areas:
     "overProduct"
     "overMezelf"
     "overKeuze";
@@ -222,7 +222,7 @@ nav h2 {
 main.contact {
   display: grid;
 
-  grid-template: "contactInfo kaart";
+  grid-template-areas: "contactInfo kaart";
   grid-template-columns: 1fr 1fr;
   row-gap: 25px;
 
@@ -316,7 +316,7 @@ main.contact {
   display: grid;
   width: 100%;
   height: 100vh;
-  grid-template:
+  grid-template-areas:
     "header header"
     "filter producten";
   grid-template-rows: 0.125fr auto;
@@ -364,7 +364,7 @@ label {
 #producten > section {
   /* Grid container */
   display: grid;
-  grid-template:
+  grid-template-areas:
     "titel"
     "elektrisch"
     "benzine"
@@ -482,7 +482,7 @@ input[type="radio"][id="kunststof"]:checked ~ section a.leer {
 #productdetails {
   /* Grids */
   display: grid;
-  grid-template:
+  grid-template-areas:
     "hoofdInfo afbeelding"
     "extraInfo afbeelding";
   grid-template-rows: 3fr 5fr;
