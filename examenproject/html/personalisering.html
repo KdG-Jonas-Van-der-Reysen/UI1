@@ -15,7 +15,7 @@
     <h1>Webshop de brommobiel</h1>
     <nav>
         <h2>Menu</h2>
-        <img class="logo" src="../media/logo.png" alt="" >
+        <img class="logo" src="../media/logo.png" alt="">
         <ul>
             <li>
                 <a href="../index.html">Home</a>
@@ -47,7 +47,126 @@
     </nav>
     <main>
         <section>
-            <h2>Personalisering</h2>
+            <h2>Bestel je brommer</h2>
+
+            <form id="bestelFormulier" action="bestelbevestiging.html" method="get">
+                <section class="bestelKolom" id="klantgegevens">
+                    <h3 class="sectieLabel">Jouw gegevens</h3>
+
+                    <!-- Voornaam -->
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" name="voornaam" id="voornaam" required>
+
+                    <!-- Achternaam -->
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" name="achternaam" id="achternaam" required>
+
+                    <!-- Email -->
+                    <fieldset class="anonymous" id="fsEmail">
+                        <label for="email">E-mail adres</label>
+                        <input type="email" name="email" id="email" required>
+                    </fieldset>
+
+                    <!-- Telefoonnummer -->
+                    <fieldset class="anonymous" id="fsTelefoonnummer">
+                        <label for="telefoonnummer">Telefoonnummer</label>
+                        <input type="tel" name="telefoonnummer" id="telefoonnummer" pattern="^0? [1-9] [0-9] {7,8}$"
+                            required>
+                    </fieldset>
+
+                    <!-- Adres -->
+                    <fieldset id="fsAdres">
+                        <legend>Adres</legend>
+
+                        <label for="adres">Adres</label>
+                        <input type="text" name="adres" id="adres" required>
+                    </fieldset>
+
+                </section>
+
+                <section class="bestelKolom" id="personalisatie">
+                    <h3 class="sectieLabel">Jouw brommer</h3>
+
+                    <!-- Kies brommer -->
+                    <label for="productKeuze">Kies je brommer</label>
+                    <select name="productKeuze" id="productKeuze" required>
+                        <!-- Elektrisch -->
+                        <option selected disabled>Klik om een brommer te kiezen</option>
+                        <optgroup label="Elektrisch">
+                            <option value="SegwayE125S">Segway E125S</option>
+                            <option value="SegwayE110SE">Segway E110SE</option>
+                            <option value="SegwayE110S">Segway E110S</option>
+                            <option value="SegwayB110S">Segway B110S</option>
+                            <option value="BrekrModelB">Brekr Model B</option>
+                            <option value="HorwinEK1">Horwin EK1</option>
+                            <option value="NIUNQISport">NIU NQI Sport</option>
+                            <option value="SuperSocoCUX">Super Soco CUX</option>
+                        </optgroup>
+
+                        <!-- Benzine -->
+                        <optgroup label="Benzine">
+                            <option value="SymOrbit2">Sym orbit 2</option>
+                            <option value="SymOrbit3">Sym orbit 3</option>
+                            <option value="AGMVX50L">AGM VX50l</option>
+                            <option value="PeugeotKisbeeActive">Peugeot Kisbee Active</option>
+                            <option value="PeugeotKisbeeStreet">Peugeot Kisbee Street</option>
+                            <option value="PeugeotDjango">Peugeot Django</option>
+                            <option value="PiaggoLiberty50S">Piaggo Liberty 50 S</option>
+                        </optgroup>
+
+                        <!-- LPG -->
+                        <optgroup label="LPG">
+                            <option value="VespaPrimavera">Vespa Primavera</option>
+                            <option value="VespaPrimaveraSport">Vespa Primavera Sport</option>
+                            <option value="VespaSprint">Vespa Sprint</option>
+                            <option value="VespaSprintSport">Vespa Sprint Sport</option>
+                            <option value="VespaSprintNotte">Vespa Sprint Notte</option>
+                            <option value="VespaSprintRacingSixties">Vespa Sprint Racing Sixties</option>
+                        </optgroup>
+
+                    </select>
+
+                    <!-- Kies snelheid -->
+                    <label for="klasse">Kies je snelheid</label>
+                    <select name="klasse" id="klasse" required>
+                        <option selected disabled>Klik om een snelheid te kiezen</option>
+                        <option value="A">Klasse A • 25 km/u</option>
+                        <option value="B">Klasse B • 45 km/u</option>
+                    </select>
+
+                    <!-- Kies kleur -->
+                    <fieldset>
+                        <legend>Kleur handvataen</legend>
+                        <label class="d-inline" for="rood">Rood</label>
+                        <input type="radio" name="kleur" id="rood">
+
+                        <label class="d-inline" for="groen">Groen</label>
+                        <input type="radio" name="kleur" id="groen">
+
+                        <label class="d-inline" for="geel">Geel</label>
+                        <input type="radio" name="kleur" id="geel">
+                    </fieldset>
+
+                    <!-- Kies extra opties -->
+                    <fieldset>
+                        <legend>Extra opties</legend>
+
+                        <!-- Cruise control - €125,00 -->
+                        <input type="checkbox" id="cruiseControl" name="cruiseControl" value="cruiseControl">
+                        <label class="d-inline" for="cruiseControl">€125 • Cruise control</label>
+
+                        <!-- ABS - €105 -->
+                        <input type="checkbox" id="abs" name="abs" value="abs">
+                        <label class="d-inline" for="abs">€105 • ABS</label>
+
+                        <!-- Winterbanden - €350 -->
+                        <input type="checkbox" id="winterbanden" name="winterbanden" value="winterbanden">
+                        <label class="d-inline" for="winterbanden">€350 • Winterbanden</label>
+                    </fieldset>
+
+
+                </section>
+            </form>
         </section>
     </main>
 </body>

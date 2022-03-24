@@ -566,6 +566,39 @@ tr td:first-child {
   box-shadow: 0 0 5px 0 rgb(187, 186, 186);
   background-color: white;
 }
+
+/* Bestelpagina - personalisering.html */
+#bestelFormulier {
+  display: grid;
+
+  grid-template-areas: "klantGegevens personalisatie";
+  grid-template-columns: 5fr 5fr;
+
+  /* Margin & padding */
+  margin-top: 0;
+}
+
+#klantgegevens {
+  grid-area: klantGegevens;
+}
+
+#personalisatie {
+  grid-area: personalisatie;
+}
+
+.bestelKolom {
+  /* Margin & padding */
+  margin: 0 10px 0 10px;
+}
+.sectieLabel {
+  background: white;
+  border-radius: 10px;
+
+  /* Margin & padding */
+  margin-top: 0;
+  padding: 10px;
+}
+
 /* Overrides */
 .no-top-margin {
   margin-top: 0;
@@ -573,4 +606,8 @@ tr td:first-child {
 
 .hide {
   display: none;
+}
+
+.d-inline {
+  display: inline;
 }
