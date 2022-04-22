@@ -620,8 +620,6 @@ tr td:first-child {
 }
 
 .bestelKolom {
-  border: none;
-
   /* Margin & padding */
   margin: 0 10px 0 10px;
 }
