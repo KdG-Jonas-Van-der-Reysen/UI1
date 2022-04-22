@@ -49,49 +49,62 @@
         <section>
             <h2>Bestel je brommer</h2>
 
-            <form id="bestelFormulier" action="bestelbevestiging.html" method="get">
-                <section class="bestelKolom" id="klantgegevens">
-                    <h3 class="sectieLabel">Jouw gegevens</h3>
+            <form id="bestelFormulier" action="bevestiging.html" method="get">
+                <fieldset class="bestelKolom" id="klantgegevens">
+                    <legend>Jouw gegevens</legend>
 
                     <!-- Voornaam -->
-                    <label for="voornaam">Voornaam</label>
-                    <input type="text" name="voornaam" id="voornaam" required>
+                    <label id="lblVoornaam" for="txtVoornaam" class="required">Voornaam</label>
+                    <input type="text" name="voornaam" id="txtVoornaam" required>
 
                     <!-- Achternaam -->
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" name="achternaam" id="achternaam" required>
+                    <label id="lblAchternaam" for="txtAchternaam" class="required">Achternaam</label>
+                    <input type="text" name="achternaam" id="txtAchternaam" required>
 
                     <!-- Email -->
-                    <fieldset class="anonymous" id="fsEmail">
-                        <label for="email">E-mail adres</label>
-                        <input type="email" name="email" id="email" required>
-                    </fieldset>
+                    <label id="lblEmail" class="mt-10px required" for="txtEmail">E-mailadres</label>
+                    <input type="email" name="email" id="txtEmail" required>
 
                     <!-- Telefoonnummer -->
-                    <fieldset class="anonymous" id="fsTelefoonnummer">
-                        <label for="telefoonnummer">Telefoonnummer</label>
-                        <input type="tel" name="telefoonnummer" id="telefoonnummer" pattern="^0? [1-9] [0-9] {7,8}$"
-                            required>
-                    </fieldset>
+                    <label id="lblTelnr" class="mt-10px" for="txtTelnr">Telefoonnummer</label>
+                    <input type="tel" name="telefoonnummer" id="txtTelnr" pattern="^0? [1-9] [0-9] {7,8}$"
+                        title="Gelieve een geldig telefoonnummer in te vullen">
 
-                    <!-- Adres -->
-                    <fieldset id="fsAdres">
-                        <legend>Adres</legend>
+                    <!-- Gewenste leverdatum -->
+                    <label id="lblLeverdatum" class="mt-10px required" for="dtLeverdatum">Gewenste
+                        leverdatum</label>
+                    <input type="date" name="leverdatum" id="dtLeverdatum" required>
 
-                        <label for="adres">Adres</label>
-                        <input type="text" name="adres" id="adres" required>
-                    </fieldset>
+                    <!-- Straatnaam -->
+                    <label for="txtStraatnaam" class="mt-10px required" id="lblStraatnaam">Straatnaam +
+                        huisnummer</label>
+                    <input type="text" name="straatnaam" id="txtStraatnaam" required>
 
-                </section>
+                    <!-- Postcode -->
+                    <label for="txtPostcode" class="mt-10px required" id="lblPostcode">Postcode</label>
+                    <input type="text" name="postcode" id="txtPostcode" pattern="^[1-9][0-9]{3}"
+                        title="Een postcode bestaat uit 4 cijfers" required>
 
-                <section class="bestelKolom" id="personalisatie">
-                    <h3 class="sectieLabel">Jouw brommer</h3>
+                    <!-- Gemeente -->
+                    <label for="txtGemeente" class="mt-10px required" id="lblGemeente">Gemeente</label>
+                    <input type="text" name="gemeente" id="txtGemeente" required>
+
+                    <!-- Land -->
+                    <label for="txtLand" id="lblLand" class="mt-10px required">Land</label>
+                    <input type="text" name="land" id="txtLand" disabled value="België">
+                    <span id="inputHelpland">We leveren voorlopig enkel in België</span>
+
+                </fieldset>
+
+
+                <fieldset class="bestelKolom" id="personalisatie">
+                    <legend>Jouw brommer</legend>
 
                     <!-- Kies brommer -->
-                    <label for="productKeuze">Kies je brommer</label>
-                    <select name="productKeuze" id="productKeuze" required>
+                    <label for="productKeuze" class="mt-20px required">Kies je brommer</label>
+                    <select name="productKeuze" id="productKeuze" class="selectMarkup" required>
                         <!-- Elektrisch -->
-                        <option selected disabled>Klik om een brommer te kiezen</option>
+                        <option selected disabled value="">Klik om een brommer te kiezen</option>
                         <optgroup label="Elektrisch">
                             <option value="SegwayE125S">Segway E125S</option>
                             <option value="SegwayE110SE">Segway E110SE</option>
@@ -127,45 +140,53 @@
                     </select>
 
                     <!-- Kies snelheid -->
-                    <label for="klasse">Kies je snelheid</label>
-                    <select name="klasse" id="klasse" required>
-                        <option selected disabled>Klik om een snelheid te kiezen</option>
-                        <option value="A">Klasse A • 25 km/u</option>
-                        <option value="B">Klasse B • 45 km/u</option>
-                    </select>
+                    <p class="mt-10px mb-5px required">Kies je snelheid</p>
+                    <input type="radio" name="snelheid" id="snelheidkiezerA" value="A" class="d-none" required>
+                    <label for="snelheidkiezerA" class="d-inline-block radioPill">A • 25 km/u</label>
+
+                    <input type="radio" name="snelheid" id="snelheidkiezerB" value="B" class="d-none">
+                    <label for="snelheidkiezerB" class="d-inline-block radioPill">B • 45 km/u</label>
 
                     <!-- Kies kleur -->
-                    <fieldset>
-                        <legend>Kleur handvataen</legend>
-                        <label class="d-inline" for="rood">Rood</label>
-                        <input type="radio" name="kleur" id="rood">
+                    <p class="required mt-10px mb-5px">Kies je kleur</p>
+                    <input type="radio" class="d-none" name="kleur" id="rood" value="rood" required>
+                    <label class="d-inline-block kleurCirkel" id="kleurKiezerRood" for="rood"></label>
 
-                        <label class="d-inline" for="groen">Groen</label>
-                        <input type="radio" name="kleur" id="groen">
+                    <input type="radio" class="d-none" name="kleur" id="groen" value="groen">
+                    <label class="d-inline-block kleurCirkel" id="kleurKiezerGroen" for="groen"></label>
 
-                        <label class="d-inline" for="geel">Geel</label>
-                        <input type="radio" name="kleur" id="geel">
-                    </fieldset>
+                    <input type="radio" class="d-none" name="kleur" id="geel" value="geel">
+                    <label class="d-inline-block kleurCirkel" id="kleurKiezerGeel" for="geel"></label>
 
                     <!-- Kies extra opties -->
-                    <fieldset>
-                        <legend>Extra opties</legend>
+                    <p class="mt-10px">Kies je extra opties</p>
 
-                        <!-- Cruise control - €125,00 -->
+                    <!-- Cruise control - €125,00 -->
+                    <label class="checkboxContainer" for="cruiseControl">
+                        &euro;125 • Cruise control
                         <input type="checkbox" id="cruiseControl" name="cruiseControl" value="cruiseControl">
-                        <label class="d-inline" for="cruiseControl">€125 • Cruise control</label>
+                        <span class="checkbox"></span>
+                    </label>
 
-                        <!-- ABS - €105 -->
+                    <!-- ABS - €105 -->
+                    <label class="checkboxContainer" for="abs">
+                        &euro;105 • ABS
                         <input type="checkbox" id="abs" name="abs" value="abs">
-                        <label class="d-inline" for="abs">€105 • ABS</label>
+                        <span class="checkbox"></span>
+                    </label>
 
-                        <!-- Winterbanden - €350 -->
+                    <!-- Winterbanden - €350 -->
+                    <label class="checkboxContainer" for="winterbanden">
+                        &euro;350 • Winterbanden
                         <input type="checkbox" id="winterbanden" name="winterbanden" value="winterbanden">
-                        <label class="d-inline" for="winterbanden">€350 • Winterbanden</label>
-                    </fieldset>
+                        <span class="checkbox"></span>
+                    </label>
 
+                    <!-- Bestellen -->
+                    <button type="submit" class="mt-10px">Bestellen</button>
 
-                </section>
+                </fieldset>
+
             </form>
         </section>
     </main>

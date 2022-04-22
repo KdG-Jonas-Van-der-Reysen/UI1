@@ -94,9 +94,11 @@ ul li ul {
   min-width: 5rem;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
   left: 0;
   display: none;
+
+  /* Margin & padding */
+  margin-top: 1rem;
 }
 
 ul li:hover > ul,
@@ -211,6 +213,8 @@ nav h2 {
 
 .testminonialRating {
   display: inline;
+
+  /* Margin & padding */
   margin-left: 10px;
 }
 
@@ -251,9 +255,9 @@ main.contact {
 .contactInfo dl {
   background: #d8d8d8;
   border-radius: 10px;
-  margin: 0 25px 10px 0;
-
+  
   /* Margin & padding */
+  margin: 0 25px 10px 0;
   padding: 10px;
 }
 .contactInfo dt {
@@ -299,10 +303,10 @@ main.contact {
 .answer {
   flex-basis: 70%;
   flex-grow: 1;
-  margin: 0;
   border-bottom: 1px solid rgb(243, 242, 242);
-
+  
   /* Margin & padding */
+  margin: 0;
   padding: 7px;
 }
 .question.no-bottom-border,
@@ -531,7 +535,8 @@ input[type="radio"][id="switch-eigenschappen"]:checked + label {
 input[type="radio"][id="switch-beschrijving"]:checked ~ #eigenschappen {
   display: none;
 }
-input[type="radio"][id="switch-eigenschappen"]:checked ~ #uitgebreideBeschrijving {
+input[type="radio"][id="switch-eigenschappen"]:checked
+  ~ #uitgebreideBeschrijving {
   display: none;
 }
 
@@ -546,7 +551,7 @@ input[type="radio"][id="switch-eigenschappen"]:checked ~ #uitgebreideBeschrijvin
 
 tr td:first-child {
   font-weight: 600;
-  
+
   /* Margin & padding */
   padding-right: 30px;
 }
@@ -578,30 +583,309 @@ tr td:first-child {
   margin-top: 0;
 }
 
-#klantgegevens {
-  grid-area: klantGegevens;
-}
-
-#personalisatie {
-  grid-area: personalisatie;
+#bestelFormulier .required:after {
+  content: " *";
+  color: red;
 }
 
 .bestelKolom {
+  border: none;
+
   /* Margin & padding */
   margin: 0 10px 0 10px;
 }
-.sectieLabel {
+
+.bestelKolom legend {
   background: white;
   border-radius: 10px;
+  font-weight: 900;
+  font-size: large;
+  width: 98%;
 
   /* Margin & padding */
   margin-top: 0;
   padding: 10px;
 }
 
+.bestelKolom input {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px 0 rgb(187, 186, 186);
+
+  /* Margin & padding */
+  padding: 0 10px 0 10px;
+}
+
+#klantgegevens {
+  /* Grid item */
+  grid-area: klantGegevens;
+
+  /* Grid display */
+  display: grid;
+  grid-template-areas:
+    "heading heading"
+    "lblVoornaam lblAchternaam"
+    "txtVoornaam txtAchternaam"
+    "lblEmail lblEmail"
+    "txtEmail txtEmail"
+    "lblTelnr lblTelnr"
+    "txtTelnr txtTelnr"
+    "lblLeverdatum lblLeverdatum"
+    "dtLeverdatum dtLeverdatum"
+    "lblStraatnaam lblStraatnaam"
+    "txtStraatnaam txtStraatnaam"
+    "lblPostcode lblGemeente"
+    "txtPostcode txtGemeente"
+    "lblLand lblLand"
+    "txtLand txtLand"
+    "inputHelpland inputHelpland";
+
+  grid-template-rows: repeat(15, 1.3fr);
+  column-gap: 20px;
+
+  height: 75vh;
+}
+
+#klantgegevens > h3 {
+  grid-area: heading;
+}
+
+#lblVoornaam {
+  grid-area: lblVoornaam;
+
+  /* Margin & padding */
+  margin-top: 0;
+}
+
+#lblAchternaam {
+  grid-area: lblAchternaam;
+
+  /* Margin & padding */
+  margin-top: 0;
+}
+
+#txtVoornaam {
+  grid-area: txtVoornaam;
+}
+
+#txtAchternaam {
+  grid-area: txtAchternaam;
+}
+
+#lblEmail {
+  grid-area: lblEmail;
+}
+
+#txtEmail {
+  grid-area: txtEmail;
+}
+
+#lblTelnr {
+  grid-area: lblTelnr;
+}
+
+#txtTelnr {
+  grid-area: txtTelnr;
+}
+
+#lblLeverdatum {
+  grid-area: lblLeverdatum;
+}
+
+#dtLeverdatum {
+  grid-area: dtLeverdatum;
+}
+
+#lblStraatnaam {
+  grid-area: lblStraatnaam;
+}
+
+#txtStraatnaam {
+  grid-area: txtStraatnaam;
+}
+
+#lblPostcode {
+  grid-area: lblPostcode;
+}
+
+#lblGemeente {
+  grid-area: lblGemeente;
+}
+
+#txtPostcode {
+  grid-area: txtPostcode;
+}
+
+#txtGemeente {
+  grid-area: txtGemeente;
+}
+
+#lblLand {
+  grid-area: lblLand;
+}
+
+#txtLand {
+  grid-area: txtLand;
+}
+
+#inputHelpland {
+  grid-area: inputHelpland;
+  color: rgb(83, 83, 83);
+  font-size: small;
+
+  /* Margin & padding */
+  margin-top: 5px;
+}
+
+#personalisatie {
+  grid-area: personalisatie;
+}
+
+.selectMarkup {
+  background: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgb(187, 186, 186);
+
+  /* Margin & padding */
+  padding: 5px;
+}
+
+.selectMarkup:focus {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.kleurCirkel {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#kleurKiezerRood {
+  background-color: red;
+}
+
+#kleurKiezerGeel {
+  background-color: yellow;
+}
+
+#kleurKiezerGroen {
+  background-color: green;
+}
+
+input[type="radio"][id="rood"]:checked + label {
+  border: 2px solid black;
+}
+input[type="radio"][id="geel"]:checked + label {
+  border: 2px solid black;
+}
+input[type="radio"][id="groen"]:checked + label {
+  border: 2px solid black;
+}
+
+.radioPill {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgb(187, 186, 186);
+  cursor: pointer;
+
+  /* Margin & padding */
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+input[type="radio"][name="snelheid"]:checked + label {
+  border: 2px solid #a5a5a5;
+}
+
+button[type="submit"] {
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgb(187, 186, 186);
+  background: rgb(147, 250, 147);
+  border: none;
+  cursor: pointer;
+
+  /* Margin & padding */
+  padding: 5px 20px;
+}
+
+button[type="submit"]:hover {
+  background: #7b9b6d;
+}
+
+/* Bestelpagina - checkboxes */
+/* The container */
+.checkboxContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  /* Margin & padding */
+  padding-left: 35px;
+  margin-bottom: 12px;
+}
+
+.checkboxContainer input {
+  display: none;
+}
+
+.checkboxContainer:hover input ~ .checkbox {
+  background-color: rgba(255, 255, 255, 0.505);
+}
+
+/* Create a custom checkbox */
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgb(187, 186, 186);
+  border-radius: 5px;
+}
+
+.checkboxContainer input:checked ~ .checkbox {
+  background-color: #747474;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkboxContainer input:checked ~ .checkbox:after {
+  display: block;
+}
+
 /* Overrides */
 .no-top-margin {
   margin-top: 0;
+}
+
+.mt-10px {
+  /* Margin & padding */
+  margin-top: 10px;
+}
+
+.mt-20px {
+  /* Margin & padding */
+  margin-top: 20px;
+}
+
+.mb-5px {
+  /* Margin & padding */
+  margin-bottom: 5px;
 }
 
 .hide {
@@ -610,4 +894,16 @@ tr td:first-child {
 
 .d-inline {
   display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+
+.bolt {
+  font-weight: 600;
 }
