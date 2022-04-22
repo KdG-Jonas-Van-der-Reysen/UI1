@@ -13,35 +13,36 @@
 
 <body>
     <h1>Webshop de brommobiel</h1>
+    <!-- Navigation bar -->
     <nav>
         <h2>Menu</h2>
-        <img class="logo" src="../media/logo.png" alt="">
+        <img class="logo" src="../media/logo.png" alt="Logo van de webshop" >
         <ul>
             <li>
-                <a href="../index.html">Home</a>
+                <a href="../../index.html">Home</a>
             </li>
             <li>
-                <a href="productoverzicht.html">Brommers</a>
+                <a href="./productoverzicht.html">Brommers</a>
+            </li>
+            <li>
+                <p>Leuke weetjes</p>
                 <ul>
                     <li>
-                        <a href="productoverzicht.html#elektrisch">Elektrische brommers</a>
+                        <a href="./eersteooit.html">Eerste webshop ooit</a>
                     </li>
                     <li>
-                        <a href="productoverzicht.html#benzine">Benzine brommers</a>
-                    </li>
-                    <li>
-                        <a href="productoverzicht.html#lpg">LPG brommers</a>
+                        <a href="./brand.html">Verwoestende brand</a>
                     </li>
                 </ul>
             </li>
             <li class="active">
-                <a href="personalisering.html">Personalisering</a>
+                <a href="./personalisering.html">Personalisering</a>
             </li>
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="./contact.html">Contact</a>
             </li>
             <li>
-                <a href="faq.html">FAQ</a>
+                <a href="./faq.html">FAQ</a>
             </li>
         </ul>
     </nav>
@@ -56,38 +57,46 @@
                     <!-- Voornaam -->
                     <label id="lblVoornaam" for="txtVoornaam" class="required">Voornaam</label>
                     <input type="text" name="voornaam" id="txtVoornaam" required>
+                    <span></span>
 
                     <!-- Achternaam -->
                     <label id="lblAchternaam" for="txtAchternaam" class="required">Achternaam</label>
                     <input type="text" name="achternaam" id="txtAchternaam" required>
+                    <span></span>
 
                     <!-- Email -->
                     <label id="lblEmail" class="mt-10px required" for="txtEmail">E-mailadres</label>
                     <input type="email" name="email" id="txtEmail" required>
+                    <span></span>
 
                     <!-- Telefoonnummer -->
                     <label id="lblTelnr" class="mt-10px" for="txtTelnr">Telefoonnummer</label>
                     <input type="tel" name="telefoonnummer" id="txtTelnr" pattern="^0? [1-9] [0-9] {7,8}$"
                         title="Gelieve een geldig telefoonnummer in te vullen">
+                    <span></span>
 
                     <!-- Gewenste leverdatum -->
                     <label id="lblLeverdatum" class="mt-10px required" for="dtLeverdatum">Gewenste
                         leverdatum</label>
                     <input type="date" name="leverdatum" id="dtLeverdatum" required>
+                    <span></span>
 
                     <!-- Straatnaam -->
                     <label for="txtStraatnaam" class="mt-10px required" id="lblStraatnaam">Straatnaam +
                         huisnummer</label>
                     <input type="text" name="straatnaam" id="txtStraatnaam" required>
+                    <span></span>
 
                     <!-- Postcode -->
                     <label for="txtPostcode" class="mt-10px required" id="lblPostcode">Postcode</label>
                     <input type="text" name="postcode" id="txtPostcode" pattern="^[1-9][0-9]{3}"
                         title="Een postcode bestaat uit 4 cijfers" required>
+                    <span></span>
 
                     <!-- Gemeente -->
                     <label for="txtGemeente" class="mt-10px required" id="lblGemeente">Gemeente</label>
                     <input type="text" name="gemeente" id="txtGemeente" required>
+                    <span></span>
 
                     <!-- Land -->
                     <label for="txtLand" id="lblLand" class="mt-10px required">Land</label>
