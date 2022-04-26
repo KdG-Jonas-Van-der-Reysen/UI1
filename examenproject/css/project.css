@@ -677,7 +677,6 @@ tr td:first-child {
     "txtLand txtLand"
     "inputHelpland inputHelpland";
 
-  grid-template-rows: repeat(15, 1.8rem);
   column-gap: 1.25rem;
 
   height: 75vh;
