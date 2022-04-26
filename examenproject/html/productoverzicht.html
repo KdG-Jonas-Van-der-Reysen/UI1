@@ -17,21 +17,20 @@
     <nav>
         <h2>Menu</h2>
         <img class="logo" src="../media/logo.png" alt="Logo van de webshop" >
-        <ul>
+        <input type="checkbox" id="hamburgerCheckbox"/>
+        <label id="hamburgerIcon" for="hamburgerCheckbox"><span id="hamburgerLine"></span></label>
+        <ul id="menu">
             <li>
-                <a href="../../index.html">Home</a>
+                <a href="../index.html">Home</a>
             </li>
             <li class="active">
-                <a href="./productoverzicht.html">Brommers</a>
-            </li>
-            <li>
-                <p>Leuke weetjes</p>
+                <p>Brommers</p>
                 <ul>
                     <li>
-                        <a href="./eersteooit.html">Eerste webshop ooit</a>
+                        <a href="./nieuwecollectie.html">Nieuwe collectie</a>
                     </li>
-                    <li>
-                        <a href="./brand.html">Verwoestende brand</a>
+                    <li class="active">
+                        <a href="./productoverzicht.html">Hele collectie</a>
                     </li>
                 </ul>
             </li>
@@ -51,7 +50,7 @@
         <h2>Filter</h2>
 
         <!-- Zadelkleur -->
-        <section>
+        <section id="filterZadelkleur" class="filterOption">
             <h3>Kies je zadelkleur</h3>
             <label class="filterLabel" for="alleKleuren">Toon alles</label>
             <label class="filterLabel" for="zwart">Zwart</label>
@@ -60,7 +59,7 @@
         </section>
 
         <!-- Materiaal -->
-        <section>
+        <section id="filterMateriaal" class="filterOption">
             <h3>Kies je materiaal</h3>
             <label class="filterLabel" for="alleMaterialen">Toon alles</label>
             <label class="filterLabel" for="leer">Leer</label>
