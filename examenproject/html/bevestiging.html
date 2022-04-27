@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/project.css">
 </head>
 
-<body>
+<body class="no-row-gap">
     <h1>Webshop de brommobiel</h1>
     <!-- Navigation bar -->
     <nav>
@@ -40,23 +40,59 @@
             <li>
                 <a href="./contact.html">Contact</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="./faq.html">FAQ</a>
             </li>
         </ul>
     </nav>
+
     <main>
         <section>
-            <h2>Bestel je brommer</h2>
+            <h2>Bedankt voor je bestelling!</h2>
+            <p>Voor de gemakkelijkheid vind je hier nog een kort overzicht van je bestelling.</p>
 
-            <p>
-                Bedankt voor je bestelling! We gaan voor je aan de slag. Je brommer zal naar alle
-                waarschijnlijkheid op de gekozen leverdatum bezorgd worden bij je thuis.
+            <dl class="order-details">
+                <!-- Voornaam -->
+                <dt id="fieldVoornaam" class="field">Voornaam</dt>
+                <dd id="valueVoornaam" class="value"></dd>
 
-                We sturen je nog een e-mail van zodra het bezorgmoment bevestigd is door ons team.
-            </p>
+                <!-- Achternaam -->
+                <dt id="fieldAchternaam" class="field">Achternaam</dt>
+                <dd id="valueAchternaam" class="value"></dd>
+
+                <!-- Email -->
+                <dt id="fieldEmail" class="field">e_mailadres</dt>
+                <dd id="valueEmail" class="value"></dd>
+
+                <!-- Telefoonnummer -->
+                <dt id="fieldTelefoonnummer" class="field">Telefoonnummer</dt>
+                <dd id="valueTelefoonnummer" class="value"></dd>
+
+                <!-- Adres -->
+                <dt id="fieldAdres" class="field">Adres</dt>
+                <dd id="valueAdres" class="value"></dd>
+
+                <!-- ProductKeuze -->
+                <dt id="fieldProductkeuze" class="field">Je brommer</dt>
+                <dd id="valueProductkeuze" class="value"></dd>
+
+                <!-- Klasse -->
+                <dt id="fieldSnelheid" class="field">Klasse</dt>
+                <dd id="valueSnelheid" class="value"></dd>
+
+                <!-- Kleur -->
+                <dt id="fieldKleur" class="field">Kleur</dt>
+                <dd id="valueKleur" class="value"></dd>
+
+                <!-- Extra opties -->
+                <dt id="fieldExtraOpties" class="field">Extra opties</dt>
+                <dd id="valueExtraOpties" class="value"></dd>
+                
+            </dl>
+
         </section>
     </main>
+    <script src="../script/form_result.js"></script>
 </body>
 
 </html>

@@ -16,8 +16,8 @@
     <!-- Navigation bar -->
     <nav>
         <h2>Menu</h2>
-        <img class="logo" src="../media/logo.png" alt="Logo van de webshop" >
-        <input type="checkbox" id="hamburgerCheckbox"/>
+        <img class="logo" src="../media/logo.png" alt="Logo van de webshop">
+        <input type="checkbox" id="hamburgerCheckbox" />
         <label id="hamburgerIcon" for="hamburgerCheckbox"><span id="hamburgerLine"></span></label>
         <ul id="menu">
             <li>
@@ -54,53 +54,54 @@
                     <legend>Jouw gegevens</legend>
 
                     <!-- Voornaam -->
-                    <label id="lblVoornaam" for="txtVoornaam" class="required">Voornaam</label>
-                    <input type="text" name="voornaam" id="txtVoornaam" required>
-                    <span></span>
+                    <label id="lblVoornaam" for="iptVoornaam" class="required">Voornaam</label>
+                    <input type="text" name="voornaam" id="iptVoornaam">
+                    <span class="validationRemark" id="validationVoornaam"></span>
 
                     <!-- Achternaam -->
-                    <label id="lblAchternaam" for="txtAchternaam" class="required">Achternaam</label>
-                    <input type="text" name="achternaam" id="txtAchternaam" required>
-                    <span></span>
+                    <label id="lblAchternaam" for="iptAchternaam" class="required">Achternaam</label>
+                    <input type="text" name="achternaam" id="iptAchternaam">
+                    <span class="validationRemark" id="validationAchternaam"></span>
 
                     <!-- Email -->
-                    <label id="lblEmail" class="mt-10px required" for="txtEmail">E-mailadres</label>
-                    <input type="email" name="email" id="txtEmail" required>
-                    <span></span>
+                    <label id="lblEmail" class="mt-10px required" for="iptEmail">E-mailadres</label>
+                    <input type="email" name="email" id="iptEmail">
+                    <span class="validationRemark" id="validationEmail"></span>
 
                     <!-- Telefoonnummer -->
-                    <label id="lblTelnr" class="mt-10px" for="txtTelnr">Telefoonnummer</label>
-                    <input type="tel" name="telefoonnummer" id="txtTelnr" pattern="^0?[1-9][0-9]{7,8}$"
+                    <label id="lblTelnr" class="mt-10px" for="iptTelnr">Telefoonnummer</label>
+                    <input type="tel" name="telefoonnummer" id="iptTelnr" pattern="^0?[1-9][0-9]{7,8}$"
                         title="Gelieve een geldig telefoonnummer in te vullen">
-                    <span></span>
+                    <span class="validationRemark" id="validationTelnr"></span>
 
                     <!-- Gewenste leverdatum -->
-                    <label id="lblLeverdatum" class="mt-10px required" for="dtLeverdatum">Gewenste
+                    <label id="lblLeverdatum" class="mt-10px required" for="iptLeverdatum">Gewenste
                         leverdatum</label>
-                    <input type="date" name="leverdatum" id="dtLeverdatum" required>
-                    <span></span>
+                    <input type="date" name="leverdatum" id="iptLeverdatum">
+                    <span class="validationRemark" id="validationLeverdatum"></span>
 
                     <!-- Straatnaam -->
-                    <label for="txtStraatnaam" class="mt-10px required" id="lblStraatnaam">Straatnaam +
+                    <label for="iptStraatnaam" class="mt-10px required" id="lblStraatnaam">Straatnaam +
                         huisnummer</label>
-                    <input type="text" name="straatnaam" id="txtStraatnaam" required>
-                    <span></span>
+                    <input type="text" name="straatnaam" id="iptStraatnaam">
+                    <span class="validationRemark" id="validationStraatnaam"></span>
 
                     <!-- Postcode -->
-                    <label for="txtPostcode" class="mt-10px required" id="lblPostcode">Postcode</label>
-                    <input type="text" name="postcode" id="txtPostcode" pattern="^[1-9][0-9]{3}"
-                        title="Een postcode bestaat uit 4 cijfers" required>
-                    <span></span>
+                    <label for="iptPostcode" class="mt-10px required" id="lblPostcode">Postcode</label>
+                    <input type="text" name="postcode" id="iptPostcode" pattern="^[1-9][0-9]{3}"
+                        title="Een postcode bestaat uit 4 cijfers">
+                    <span class="validationRemark" id="validationPostcode"></span>
 
                     <!-- Gemeente -->
-                    <label for="txtGemeente" class="mt-10px required" id="lblGemeente">Gemeente</label>
-                    <input type="text" name="gemeente" id="txtGemeente" required>
-                    <span></span>
+                    <label for="iptGemeente" class="mt-10px required" id="lblGemeente">Gemeente</label>
+                    <input type="text" name="gemeente" id="iptGemeente">
+                    <span class="validationRemark" id="validationGemeente"></span>
 
                     <!-- Land -->
-                    <label for="txtLand" id="lblLand" class="mt-10px required">Land</label>
-                    <input type="text" name="land" id="txtLand" disabled value="België">
+                    <label for="iptLand" id="lblLand" class="mt-10px required">Land</label>
+                    <input type="text" name="land" id="iptLand" readonly value="België">
                     <span id="inputHelpland">We leveren voorlopig enkel in België</span>
+                    
 
                 </fieldset>
 
@@ -110,7 +111,7 @@
 
                     <!-- Kies brommer -->
                     <label for="productKeuze" class="mt-20px required">Kies je brommer</label>
-                    <select name="productKeuze" id="productKeuze" class="selectMarkup" required>
+                    <select name="productkeuze" id="productKeuze" class="selectMarkup">
                         <!-- Elektrisch -->
                         <option selected disabled value="">Klik om een brommer te kiezen</option>
                         <optgroup label="Elektrisch">
@@ -149,7 +150,7 @@
 
                     <!-- Kies snelheid -->
                     <p class="mt-10px mb-5px required">Kies je snelheid</p>
-                    <input type="radio" name="snelheid" id="snelheidkiezerA" value="A" class="d-none" required>
+                    <input type="radio" name="snelheid" id="snelheidkiezerA" value="A" class="d-none">
                     <label for="snelheidkiezerA" class="d-inline-block radioPill">A • 25 km/u</label>
 
                     <input type="radio" name="snelheid" id="snelheidkiezerB" value="B" class="d-none">
@@ -157,7 +158,7 @@
 
                     <!-- Kies kleur -->
                     <p class="required mt-10px mb-5px">Kies je kleur</p>
-                    <input type="radio" class="d-none" name="kleur" id="rood" value="rood" required>
+                    <input type="radio" class="d-none" name="kleur" id="rood" value="rood">
                     <label class="d-inline-block kleurCirkel" id="kleurKiezerRood" for="rood"></label>
 
                     <input type="radio" class="d-none" name="kleur" id="groen" value="groen">
@@ -192,12 +193,15 @@
 
                     <!-- Bestellen -->
                     <button type="submit" class="mt-10px">Bestellen</button>
+                    <span class="validationRemark" id="validationCompleteForm"></span>
 
                 </fieldset>
 
             </form>
         </section>
     </main>
+
+    <script src="../script/form_validation.js"></script>
 </body>
 
 </html>

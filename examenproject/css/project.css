@@ -300,7 +300,7 @@ main.contact {
 }
 
 /* FAQ - faq.html */
-.faq-items {
+.faq-items, .order-details {
   display: flex;
   flex-flow: row wrap;
 
@@ -309,7 +309,7 @@ main.contact {
   border: solid #d8d8d8;
   border-radius: 0.625rem;
 }
-.question {
+.question, .field {
   flex-basis: 20%;
 
   background: #d8d8d8;
@@ -320,7 +320,7 @@ main.contact {
   /* Margin & padding */
   padding: 0.4375rem;
 }
-.answer {
+.answer, .value {
   flex-basis: 70%;
   flex-grow: 1;
   border-bottom: 1px solid rgb(243, 242, 242);
@@ -662,19 +662,31 @@ tr td:first-child {
   grid-template-areas:
     "heading heading"
     "lblVoornaam lblAchternaam"
-    "txtVoornaam txtAchternaam"
+    "iptVoornaam iptAchternaam"
+    "validationVoornaam validationAchternaam"
+
     "lblEmail lblEmail"
-    "txtEmail txtEmail"
+    "iptEmail iptEmail"
+    "validationEmail validationEmail"
+    
     "lblTelnr lblTelnr"
-    "txtTelnr txtTelnr"
+    "iptTelnr iptTelnr"
+    "validationTelnr validationTelnr"
+
     "lblLeverdatum lblLeverdatum"
-    "dtLeverdatum dtLeverdatum"
+    "iptLeverdatum iptLeverdatum"
+    "validationLeverdatum validationLeverdatum"
+
     "lblStraatnaam lblStraatnaam"
-    "txtStraatnaam txtStraatnaam"
+    "iptStraatnaam iptStraatnaam"
+    "validationStraatnaam validationStraatnaam"
+
     "lblPostcode lblGemeente"
-    "txtPostcode txtGemeente"
+    "iptPostcode iptGemeente"
+    "validationPostcode validationGemeente"
+
     "lblLand lblLand"
-    "txtLand txtLand"
+    "iptLand iptLand"
     "inputHelpland inputHelpland";
 
   column-gap: 1.25rem;
@@ -700,44 +712,68 @@ tr td:first-child {
   margin-top: 0;
 }
 
-#txtVoornaam {
-  grid-area: txtVoornaam;
+#iptVoornaam {
+  grid-area: iptVoornaam;
 }
 
-#txtAchternaam {
-  grid-area: txtAchternaam;
+#iptAchternaam {
+  grid-area: iptAchternaam;
+}
+
+#validationVoornaam {
+  grid-area: validationVoornaam;
+}
+
+#validationAchternaam {
+  grid-area: validationAchternaam;
 }
 
 #lblEmail {
   grid-area: lblEmail;
 }
 
-#txtEmail {
-  grid-area: txtEmail;
+#iptEmail {
+  grid-area: iptEmail;
+}
+
+#validationEmail {
+  grid-area: validationEmail;
 }
 
 #lblTelnr {
   grid-area: lblTelnr;
 }
 
-#txtTelnr {
-  grid-area: txtTelnr;
+#iptTelnr {
+  grid-area: iptTelnr;
+}
+
+#validationTelnr {
+  grid-area: validationTelnr;
 }
 
 #lblLeverdatum {
   grid-area: lblLeverdatum;
 }
 
-#dtLeverdatum {
-  grid-area: dtLeverdatum;
+#iptLeverdatum {
+  grid-area: iptLeverdatum;
+}
+
+#validationLeverdatum {
+  grid-area: validationLeverdatum;
 }
 
 #lblStraatnaam {
   grid-area: lblStraatnaam;
 }
 
-#txtStraatnaam {
-  grid-area: txtStraatnaam;
+#iptStraatnaam {
+  grid-area: iptStraatnaam;
+}
+
+#validationStraatnaam {
+  grid-area: validationStraatnaam;
 }
 
 #lblPostcode {
@@ -748,20 +784,28 @@ tr td:first-child {
   grid-area: lblGemeente;
 }
 
-#txtPostcode {
-  grid-area: txtPostcode;
+#iptPostcode {
+  grid-area: iptPostcode;
 }
 
-#txtGemeente {
-  grid-area: txtGemeente;
+#iptGemeente {
+  grid-area: iptGemeente;
+}
+
+#validationPostcode {
+  grid-area: validationPostcode;
+}
+
+#validationGemeente {
+  grid-area: validationGemeente;
 }
 
 #lblLand {
   grid-area: lblLand;
 }
 
-#txtLand {
-  grid-area: txtLand;
+#iptLand {
+  grid-area: iptLand;
 }
 
 #inputHelpland {
@@ -1167,7 +1211,9 @@ button {
 
   /* FAQ page */
   .question,
-  .answer {
+  .answer,
+  .field,
+  .value {
     flex-basis: 100%;
   }
 }
@@ -1178,33 +1224,38 @@ button {
     grid-template-areas:
       "heading"
       "lblVoornaam"
-      "txtVoornaam"
+      "iptVoornaam"
       "lblAchternaam"
-      "txtAchternaam"
+      "iptAchternaam"
       "lblEmail"
-      "txtEmail"
+      "iptEmail"
       "lblTelnr"
-      "txtTelnr"
+      "iptTelnr"
       "lblLeverdatum"
-      "dtLeverdatum"
+      "iptLeverdatum"
       "lblStraatnaam"
-      "txtStraatnaam"
+      "iptStraatnaam"
       "lblPostcode"
-      "txtPostcode"
+      "iptPostcode"
       "lblGemeente"
-      "txtGemeente"
+      "iptGemeente"
       "lblLand"
-      "txtLand"
+      "iptLand"
       "inputHelpland";
     grid-template-columns: auto;
     grid-template-rows: repeat(20, auto);
   }
 
-  #dtLeverdatum {
+  #iptLeverdatum {
     width: auto;
   }
 
   .bestelKolom input {
     min-height: 1.5rem;
   }
+}
+
+.validationRemark {
+  color: red;
+  display: none;
 }
