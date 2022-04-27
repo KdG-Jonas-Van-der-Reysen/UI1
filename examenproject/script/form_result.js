@@ -14,7 +14,8 @@ function vulWaardeIn(waardeNaam) {
 }
 
 // Wachten tot de pagina geladen is
-window.addEventListener('DOMContentLoaded',() => {
+addEventListener("load", init);
+function init() {
     vulWaardeIn("Voornaam");
     vulWaardeIn("Achternaam");
     vulWaardeIn("Email");
@@ -41,4 +42,4 @@ window.addEventListener('DOMContentLoaded',() => {
     }
 
     document.getElementById("valueExtraOpties").innerHTML =opties.join(", ")
-});
+}
