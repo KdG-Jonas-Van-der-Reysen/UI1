@@ -1,5 +1,7 @@
 // Bij het laden van de pagina
-window.addEventListener('DOMContentLoaded', () => {
+addEventListener("load", init);
+
+function init (){
     // Constante variabelen
     const iptAchternaam = document.getElementById("iptAchternaam");
     const validationAchternaam = document.getElementById("validationAchternaam");
@@ -72,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById("bestelFormulier").addEventListener("submit", valideerFormulier, false);
 
 
-});
+};
 
 
 
