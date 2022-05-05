@@ -403,32 +403,13 @@ label {
 }
 
 #producten > section {
-  /* Grid container */
+  /* Grid container
   display: grid;
   grid-template-areas:
     "titel"
     "elektrisch"
     "benzine"
-    "lpg";
-}
-
-#productenTitel {
-  grid-area: titel;
-}
-
-#elektrisch {
-  /* Grid item */
-  grid-area: elektrisch;
-}
-
-#benzine {
-  /* Grid item */
-  grid-area: benzine;
-}
-
-#lpg {
-  /* Grid item */
-  grid-area: lpg;
+    "lpg"; */
 }
 
 .productCategory > h3 {
@@ -572,8 +553,7 @@ input[type="radio"][id="switch-eigenschappen"]:checked + label {
 input[type="radio"][id="switch-beschrijving"]:checked ~ #eigenschappen {
   display: none;
 }
-input[type="radio"][id="switch-eigenschappen"]:checked
-  ~ #uitgebreideBeschrijving {
+input[type="radio"][id="switch-eigenschappen"]:checked ~ #uitgebreideBeschrijving {
   display: none;
 }
 
@@ -1110,7 +1090,6 @@ button {
     display: block;
     float: right;
     cursor: pointer;
-    float: right;
 
     /* Margin & padding */
     padding: 1.5625rem 1.25rem;

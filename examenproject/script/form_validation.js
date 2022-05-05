@@ -74,7 +74,6 @@ function init (){
     document.getElementById("bestelFormulier").addEventListener("submit", valideerFormulier, false);
 
 
-};
-
+}
 
 

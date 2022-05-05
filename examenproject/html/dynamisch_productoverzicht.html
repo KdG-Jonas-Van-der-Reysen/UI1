@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productoverzicht</title>
+
+    <!-- CSS bestand -->
+    <link rel="stylesheet" href="../css/project.css">
+
+    <!-- JS - Pagina genereren -->
+    <script src="../script/dyn_data.js"></script>
+    <script src="../script/dyn_generate.js"></script>
+</head>
+
+<body id="productoverzicht">
+    <h1>Webshop de brommobiel</h1>
+    <!-- Navigation bar -->
+    <nav>
+        <h2>Menu</h2>
+        <img class="logo" src="../media/logo.png" alt="Logo van de webshop" >
+        <input type="checkbox" id="hamburgerCheckbox"/>
+        <label id="hamburgerIcon" for="hamburgerCheckbox"><span id="hamburgerLine"></span></label>
+        <ul id="menu">
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li class="active">
+                <p>Brommers</p>
+                <ul>
+                    <li>
+                        <a href="./nieuwecollectie.html">Nieuwe collectie</a>
+                    </li>
+                    <li class="active">
+                        <a href="./productoverzicht.html">Hele collectie</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./personalisering.html">Personalisering</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="./faq.html">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main id="producten"></main>
+</body>
+
+</html>
