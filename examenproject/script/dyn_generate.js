@@ -139,8 +139,8 @@ let producten = [];
 let filters = [];
 let categorieen = [];
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalizeFirstLetter(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function init() {
@@ -149,7 +149,7 @@ function init() {
         "beforeend",
         `
     <li>
-        <a href="./productoverzicht.html">Statische producten</a>
+        <a href="../html/productoverzicht.html">Statische producten</a>
     </li>
     `
     );
@@ -266,6 +266,8 @@ function verwerkData() {
             }
         });
     });
+
+    console.log(categorieen);
 }
 function eraseProducten() {
     // PAGINA LEEGMAKEN
