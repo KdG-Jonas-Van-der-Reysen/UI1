@@ -429,6 +429,11 @@ label {
   margin-bottom: 0.625rem;
 }
 
+.productLink[href="#"]{
+  cursor: default;
+  pointer-events: none;
+}
+
 .product {
   background: white;
   border-radius: 0.625rem;

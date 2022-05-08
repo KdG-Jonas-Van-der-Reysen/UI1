@@ -15,12 +15,13 @@ class Product {
         this._naam = details[4];
         this._prijs = details[5];
         this._thumb = details[6];
-        this._kortereNaam = details[7];
+        this._kortereNaam = (details[7] === "NULL") ? undefined : details[7];
+        this._heeftLink = (parseInt(details[8]) === 1);
     }
 
     toHtml() {
         return `
-        <a class="productLink ${this.kleur} ${this.zadelmateriaal}" href="detailpaginas/detail-${this.gestripteNaam}.html">
+        <a class="productLink ${this.kleur} ${this.zadelmateriaal}" href="${(this._heeftLink) ? "detailpaginas/detail-" + this.gestripteNaam + ".html" : '#'}">
             <section class="product">
                 <img src="../media/${this.thumb}" alt="Thumbnail van ${this.naam}"
                     class="productThumbnail">
