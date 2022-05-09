@@ -49,44 +49,43 @@
         </ul>
     </nav>
 
-    <section id="filter">
-        <h2>Filter</h2>
-
-        <!-- Zadelkleur -->
-        <section id="filterZadelkleur" class="filterOption">
-            <h3>Kies je zadelkleur</h3>
-            <label class="filterLabel" for="alleKleuren">Toon alles</label>
-            <label class="filterLabel" for="zwart">Zwart</label>
-            <label class="filterLabel" for="bruin">Bruin</label>
-            <label class="filterLabel" for="grijs">Grijs</label>
-        </section>
-
-        <!-- Materiaal -->
-        <section id="filterMateriaal" class="filterOption">
-            <h3>Kies je materiaal</h3>
-            <label class="filterLabel" for="alleMaterialen">Toon alles</label>
-            <label class="filterLabel" for="leer">Leer</label>
-            <label class="filterLabel" for="kunstleer">Kunstleer</label>
-            <label class="filterLabel" for="kunststof">Kunststof</label>
-        </section>
-    </section>
-
-
-    <main id="producten">
+    <main>
 
         <!-- Radio zadelkleur -->
-        <input class="hide" type="radio" name="zadelkleur" value="alleKleuren" id="alleKleuren">
+        <input class="hide" type="radio" name="zadelkleur" value="alleKleuren" id="alleKleuren" checked>
         <input class="hide" type="radio" name="zadelkleur" value="zwart" id="zwart">
         <input class="hide" type="radio" name="zadelkleur" value="bruin" id="bruin">
         <input class="hide" type="radio" name="zadelkleur" value="grijs" id="grijs">
 
         <!-- Radio materiaal zadel -->
-        <input class="hide" type="radio" name="zadelmateriaal" value="alleMaterialen" id="alleMaterialen">
+        <input class="hide" type="radio" name="zadelmateriaal" value="alleMaterialen" id="alleMaterialen" checked>
         <input class="hide" type="radio" name="zadelmateriaal" value="leer" id="leer">
         <input class="hide" type="radio" name="zadelmateriaal" value="kunstleer" id="kunstleer">
         <input class="hide" type="radio" name="zadelmateriaal" value="kunststof" id="kunststof">
 
-        <section>
+        <section id="filter">
+            <h2>Filter</h2>
+    
+            <!-- Zadelkleur -->
+            <section id="filterZadelkleur" class="filterOption">
+                <h3>Kies je zadelkleur</h3>
+                <label class="filterLabel" for="alleKleuren">Toon alles</label>
+                <label class="filterLabel" for="zwart">Zwart</label>
+                <label class="filterLabel" for="bruin">Bruin</label>
+                <label class="filterLabel" for="grijs">Grijs</label>
+            </section>
+    
+            <!-- Materiaal -->
+            <section id="filterMateriaal" class="filterOption">
+                <h3>Kies je materiaal</h3>
+                <label class="filterLabel" for="alleMaterialen">Toon alles</label>
+                <label class="filterLabel" for="leer">Leer</label>
+                <label class="filterLabel" for="kunstleer">Kunstleer</label>
+                <label class="filterLabel" for="kunststof">Kunststof</label>
+            </section>
+        </section>
+
+        <section id="producten">
             <h2 id="productenTitel">Producten</h2>
 
             <section class="productCategory no-top-margin" id="elektrisch">

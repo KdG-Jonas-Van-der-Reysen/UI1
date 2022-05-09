@@ -336,21 +336,24 @@ main.contact {
 
 /* Productoverzicht & nieuwe collectie - productoverzicht.html & nieuwecollectie.html */
 #productoverzicht {
-  /* Grids */
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  grid-template-areas:
-    "header header"
-    "filter producten";
-  grid-template-rows: 0.125fr auto;
-  grid-template-columns: 2.6fr 8fr;
-
   /* Margin & padding */
   margin: 0;
 
   /* Font */
   font-family: "Roboto", sans-serif;
+}
+
+#productoverzicht main {
+  /* Grids */
+  display: grid;
+  width: calc(100% - 1.25rem);
+  height: 100vh;
+  grid-template-areas:
+    "filter producten";
+  grid-template-columns: 2.6fr 8fr;
+
+  /* Margin & padding */
+  padding: 0 0 0 1.25rem
 }
 
 #nieuwecollectie {
@@ -402,15 +405,6 @@ label {
   grid-area: producten;
 }
 
-#producten > section {
-  /* Grid container
-  display: grid;
-  grid-template-areas:
-    "titel"
-    "elektrisch"
-    "benzine"
-    "lpg"; */
-}
 
 .productCategory > h3 {
   margin-bottom: 0;
@@ -467,16 +461,25 @@ label {
   margin: 0;
 }
 
+/* Standaard reset knop donkerder maken */
+label[for="alleKleuren"] {
+  background-color: #d8d8d8;
+}
+
+label[for="alleMaterialen"] {
+  background-color: #d8d8d8;
+}
+
 /* Filter voor zwart */
 input[type="radio"][id="zwart"]:checked ~ section a.bruin,
 input[type="radio"][id="zwart"]:checked ~ section a.grijs {
   display: none;
 }
-
-/* Filter voor grijs */
-input[type="radio"][id="grijs"]:checked ~ section a.zwart,
-input[type="radio"][id="grijs"]:checked ~ section a.bruin {
-  display: none;
+input[type="radio"][id="zwart"]:checked ~ #filter section label[for="alleKleuren"] {
+  background-color: white;
+}
+input[type="radio"][id="zwart"]:checked ~ #filter section label[for="zwart"] {
+  background-color: #d8d8d8;
 }
 
 /* Filter voor bruin */
@@ -484,11 +487,35 @@ input[type="radio"][id="bruin"]:checked ~ section a.zwart,
 input[type="radio"][id="bruin"]:checked ~ section a.grijs {
   display: none;
 }
+input[type="radio"][id="bruin"]:checked ~ #filter section label[for="alleKleuren"] {
+  background-color: white;
+}
+input[type="radio"][id="bruin"]:checked ~ #filter section label[for="bruin"] {
+  background-color: #d8d8d8;
+}
+
+/* Filter voor grijs */
+input[type="radio"][id="grijs"]:checked ~ section a.zwart,
+input[type="radio"][id="grijs"]:checked ~ section a.bruin {
+  display: none;
+}
+input[type="radio"][id="grijs"]:checked ~ #filter section label[for="alleKleuren"] {
+  background-color: white;
+}
+input[type="radio"][id="grijs"]:checked ~ #filter section label[for="grijs"] {
+  background-color: #d8d8d8;
+}
 
 /* Filter voor leer */
 input[type="radio"][id="leer"]:checked ~ section a.kunstleer,
 input[type="radio"][id="leer"]:checked ~ section a.kunststof {
   display: none;
+}
+input[type="radio"][id="leer"]:checked ~ #filter section label[for="alleMaterialen"] {
+  background-color: white;
+}
+input[type="radio"][id="leer"]:checked ~ #filter section label[for="leer"] {
+  background-color: #d8d8d8;
 }
 
 /* Filter voor kunstleer */
@@ -496,11 +523,23 @@ input[type="radio"][id="kunstleer"]:checked ~ section a.leer,
 input[type="radio"][id="kunstleer"]:checked ~ section a.kunststof {
   display: none;
 }
+input[type="radio"][id="kunstleer"]:checked ~ #filter section label[for="alleMaterialen"] {
+  background-color: white;
+}
+input[type="radio"][id="kunstleer"]:checked ~ #filter section label[for="kunstleer"] {
+  background-color: #d8d8d8;
+}
 
 /* Filter voor kunststof */
 input[type="radio"][id="kunststof"]:checked ~ section a.kunstleer,
 input[type="radio"][id="kunststof"]:checked ~ section a.leer {
   display: none;
+}
+input[type="radio"][id="kunststof"]:checked ~ #filter section label[for="alleMaterialen"] {
+  background-color: white;
+}
+input[type="radio"][id="kunststof"]:checked ~ #filter section label[for="kunststof"] {
+  background-color: #d8d8d8;
 }
 
 /* Productdetails - detail-xxx.html */
@@ -1030,8 +1069,8 @@ button {
   }
 
   /* Productoverzicht en favorieten pagina */
-  #productoverzicht {
-    grid-template-areas: "header" "filter" "producten";
+  #productoverzicht main {
+    grid-template-areas: "filter" "producten";
     grid-template-rows: 0.125fr auto;
     grid-template-columns: auto;
   }

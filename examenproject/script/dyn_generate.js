@@ -155,8 +155,15 @@ function init() {
     `
     );
 
+    // Main element zoeken
+    const mainElement = document.querySelector("main");
+
     // Filter section toevoegen
-    document.getElementById("producten").insertAdjacentHTML("beforebegin", '<section id="filter"></section>');
+    mainElement.insertAdjacentHTML("afterbegin", '<section id="filter"></section>');
+    
+    // Product section toevoegen
+    mainElement.insertAdjacentHTML("afterbegin", '<section id="producten"></section>');
+
     // Reverse knop toevoegen
     document.getElementById("filter").insertAdjacentHTML('beforeend', `
     <button id="btnReverse">Reverse</button>
@@ -172,14 +179,14 @@ function init() {
 }
 
 function verwerkData() {
-    eraseProducten();
+    //eraseProducten();
 
     // Gegevens prepareren
     let categorieLijnen;
     let productLijnen;
 
+    const mainElement = document.querySelector("main");
     const filterSection = document.getElementById("filter");
-    const productMain = document.getElementById("producten");
 
     // Filters
     filterLijnen.forEach((lijn) => {
@@ -202,12 +209,12 @@ function verwerkData() {
         </section>
         `
         );
-        productMain.insertAdjacentHTML(
-            "beforeend",
+        mainElement.insertAdjacentHTML(
+            "afterbegin",
             `
             <input class="hide" type="radio" name="${filterId
                 .substring(6)
-                .toLowerCase()}" value="${filter[1]}" id="${filter[1]}">
+                .toLowerCase()}" value="${filter[1]}" id="${filter[1]}" checked>
         `
         );
 
@@ -224,8 +231,8 @@ function verwerkData() {
                 )}</label>
             `
             );
-            productMain.insertAdjacentHTML(
-                "beforeend",
+            mainElement.insertAdjacentHTML(
+                "afterbegin",
                 `
                 <input class="hide" type="radio" name="${filterId
                     .substring(6)
@@ -272,8 +279,8 @@ function verwerkData() {
 }
 function eraseProducten() {
     // PAGINA LEEGMAKEN
-    const productMain = document.getElementById("producten");
-    productMain.innerHTML = "";
+    const productSection = document.getElementById("producten");
+    productSection.innerHTML = "";
 }
 function toonProducten() {
     // Webpagina genereren
